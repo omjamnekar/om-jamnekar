@@ -8,6 +8,7 @@ import WorkCard from "@/components/WorkCard";
 import TechStack from "@/components/TechStack";
 import Testimonials from "@/components/Testimonials";
 import LatestBlogPosts from "@/components/LatestBlogPosts";
+import CTABanner from "@/components/CTABanner";
 
 export default function Home() {
   return (
@@ -81,6 +82,9 @@ export default function Home() {
 
         {/* Latest Blog Posts */}
         <LatestBlogPosts />
+
+        {/* CTA Banner */}
+        <CTABanner />
       </main>
     </div>
   );
