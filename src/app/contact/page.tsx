@@ -1,6 +1,9 @@
-import Container from "@/components/Container";
+import Co    <div className="min-h-screen bg-black text-white">
+      <main className="pt-16">
+        {/* Contact Section */}
+        <ContactSection />
+      </main>"@/components/ContactSection";
 import type { Metadata } from "next";
-import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact",

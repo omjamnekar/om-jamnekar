@@ -1,17 +1,29 @@
+'use client'
+
 import Link from "next/link";
 import Container from "@/components/Container";
 import { site } from "@/data/site";
 
 const links = [
   { href: "/about", label: "About" },
-  { href: "/#work", label: "My work" },
-  { href: "/projects", label: "Projects" },
-  { href: "/posts", label: "Posts" },
-  { href: "/pricing", label: "Pricing" },
-  { href: "/contact", label: "Contact Me" },
+  { href: "/#work", label: "Work" },
+  { href: "/services", label: "Services" },
+  { href: "/posts", label: "Blog" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export default function Header() {
+  const handleScrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith('/#')) {
+      e.preventDefault();
+      const sectionId = href.substring(2);
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
   return (
     <header className="bg-black">
       <Container>
@@ -28,6 +40,7 @@ export default function Header() {
               <li key={l.href}>
                 <Link
                   href={l.href}
+                  onClick={(e) => handleScrollToSection(e, l.href)}
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   {l.label}
