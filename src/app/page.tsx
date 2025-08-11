@@ -2,29 +2,31 @@ import Link from "next/link";
 import Container from "@/components/Container";
 import { projects, type Project } from "@/data/projects";
 import Experience from "@/components/Experience";
-import Skills from "@/components/Skills";
-import Testimonials from "@/components/Testimonials";
 import SectionHeading from "@/components/SectionHeading";
-import Announcement from "@/components/Announcement";
 import HeroCard from "@/components/HeroCard";
 import WorkCard from "@/components/WorkCard";
-import { posts } from "@/data/posts";
+import TechStack from "@/components/TechStack";
+import Testimonials from "@/components/Testimonials";
+import LatestBlogPosts from "@/components/LatestBlogPosts";
 
 export default function Home() {
   return (
-    <div>
+    <div className="min-h-screen bg-black text-white">
       <main>
-        <section className="pt-6 sm:pt-8">
-          <Announcement />
-          <div className="mt-4">
-            <HeroCard />
-          </div>
-        </section>
+        {/* Hero Section */}
+        <HeroCard />
 
-  <section id="work" className="py-12 bg-black/[.02] dark:bg-white/[.03]">
+        {/* Tech Stack Section */}
+        <TechStack />
+
+        {/* Experience Section */}
+        <Experience />
+
+        {/* My Work Section */}
+        <section id="work" className="py-12">
           <Container>
             <SectionHeading>My work</SectionHeading>
-            <div className="mt-6 grid gap-6 sm:grid-cols-2">
+            <div className="mt-8 space-y-6">
               {projects.slice(0, 4).map((p: Project) => (
                 <WorkCard
                   key={p.slug}
@@ -36,31 +38,50 @@ export default function Home() {
                 />
               ))}
             </div>
+            <div className="mt-8">
+              <Link 
+                href="/projects" 
+                className="inline-flex items-center text-sm text-cyan-400 hover:text-cyan-300 transition-colors"
+              >
+                View all projects →
+              </Link>
+            </div>
           </Container>
         </section>
 
-  <div id="experience"><Experience /></div>
-  <div id="skills"><Skills /></div>
-  <Testimonials />
-
+        {/* Personal Projects Section */}
         <section className="py-12">
           <Container>
-            <SectionHeading>Latest posts</SectionHeading>
-            <div className="mt-6 grid gap-6 sm:grid-cols-2">
-              {posts.slice(0, 2).map((p) => (
-                <Link key={p.slug} href={`/posts/${p.slug}`} className="block rounded-xl border border-black/10 dark:border-white/10 p-5 hover:shadow-sm transition">
-                  <h3 className="font-semibold tracking-tight">{p.title}</h3>
-                  <p className="mt-2 text-sm text-black/70 dark:text-white/70">{p.excerpt}</p>
-                  <p className="mt-2 text-xs text-black/60 dark:text-white/60">{new Date(p.date).toLocaleDateString()}</p>
-                </Link>
+            <SectionHeading>My personal projects</SectionHeading>
+            <div className="mt-8 grid gap-6 sm:grid-cols-2">
+              {projects.slice(4, 6).map((p: Project) => (
+                <WorkCard
+                  key={p.slug}
+                  href={`/projects/${p.slug}`}
+                  title={p.title}
+                  summary={p.summary}
+                  tags={p.tags}
+                  image={p.image}
+                />
               ))}
             </div>
-            <div className="mt-4">
-              <Link href="/posts" className="text-sm underline underline-offset-4">More…</Link>
+            <div className="mt-8">
+              <Link 
+                href="/projects" 
+                className="inline-flex items-center text-sm text-cyan-400 hover:text-cyan-300 transition-colors"
+              >
+                More... →
+              </Link>
             </div>
           </Container>
         </section>
-  </main>
+
+        {/* Testimonials Section */}
+        <Testimonials />
+
+        {/* Latest Blog Posts */}
+        <LatestBlogPosts />
+      </main>
     </div>
   );
 }

@@ -1,25 +1,54 @@
 import Container from "@/components/Container";
-import SocialIcons from "@/components/SocialIcons";
+import { site } from "@/data/site";
+import { Mail, Github, Linkedin, Instagram, MapPin } from "lucide-react";
 
 export default function HeroCard() {
   return (
-    <section>
+    <section className="pt-16 pb-12">
       <Container>
-        <div className="rounded-xl border border-black/15 dark:border-white/15 p-6 sm:p-7 bg-black/[.02] dark:bg-white/[.03]">
-          <div className="flex items-start justify-between gap-4">
-            <div>
-              <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">Your Name</h1>
-              <p className="mt-1 text-sm text-black/60 dark:text-white/60">📍 Your City, Country</p>
-              <p className="mt-4 text-black/80 dark:text-white/80 max-w-prose">
-                I am a Full-Stack Web Developer. I have been programming for over 6 years. I create professional websites.
+        <div className="border border-gray-800 rounded-xl p-8 bg-gray-900/20">
+          <div className="flex items-start justify-between">
+            <div className="flex-1">
+              <h1 className="text-3xl font-bold mb-2 text-white">
+                {site.name}
+              </h1>
+              
+              <p className="text-gray-400 text-sm mb-6 flex items-center gap-2">
+                <MapPin className="w-4 h-4 text-white" /> {site.location}
+              </p>
+              
+              <p className="text-gray-300 leading-relaxed max-w-2xl">
+                I'm 16-year-old {site.title}. I have been programming for more than 6 years. I create professional websites.
               </p>
             </div>
-            <div className="shrink-0 hidden sm:block">
-              <SocialIcons />
-            </div>
+            
+            <div className="flex items-center gap-3">
+            <a 
+              href={`mailto:${site.email}`} 
+              className="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-gray-900 hover:bg-gray-800 transition-colors border border-gray-700"
+              aria-label="Email"
+            >
+              <Mail className="w-4 h-4 text-gray-300" />
+            </a>
+            <a 
+              href={site.socials.github} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-gray-900 hover:bg-gray-800 transition-colors border border-gray-700"
+              aria-label="GitHub"
+            >
+              <Github className="w-4 h-4 text-gray-300" />
+            </a>
+            <a 
+              href={site.socials.instagram} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-gray-900 hover:bg-gray-800 transition-colors border border-gray-700"
+              aria-label="Instagram"
+            >
+              <Instagram className="w-4 h-4 text-gray-300" />
+            </a>
           </div>
-          <div className="mt-4 sm:hidden">
-            <SocialIcons />
           </div>
         </div>
       </Container>
