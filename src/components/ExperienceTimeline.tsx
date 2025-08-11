@@ -22,7 +22,7 @@ export default function ExperienceTimeline() {
       <VerticalTimeline animate={false} layout="1-column-left" lineColor="transparent">
         {experiences.map((e) => (
           <VerticalTimelineElement
-            key={`${e.company}-${e.start}`}
+            key={`${e.period}`}
             contentStyle={{
               background: "transparent",
               color: colors.text,
@@ -59,7 +59,7 @@ export default function ExperienceTimeline() {
             </h3>
             <h4 className="font-semibold mt-1 text-base">{e.role}</h4>
             <div className="text-xs mt-1" style={{ color: colors.sub }}>
-              {e.start} {e.end ? `– ${e.end}` : "– Present"}
+              {`${e.period}`}
             </div>
             <p className="text-base mt-3 leading-relaxed" style={{ color: colors.text }}>
               {e.summary}
