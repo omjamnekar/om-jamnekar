@@ -1,6 +1,6 @@
 import Container from "@/components/Container";
 import { site } from "@/data/site";
-import { Mail, Github, Linkedin, Instagram, MapPin } from "lucide-react";
+import { Mail, Github, Instagram, MapPin } from "lucide-react";
 
 export default function HeroCard() {
   return (
@@ -18,7 +18,7 @@ export default function HeroCard() {
               </p>
               
               <p className="text-gray-300 leading-relaxed max-w-2xl">
-                I'm 16-year-old {site.title}. I have been programming for more than 6 years. I create professional websites.
+                I&apos;m 16-year-old {site.title}. I have been programming for more than 6 years. I create professional websites.
               </p>
             </div>
             

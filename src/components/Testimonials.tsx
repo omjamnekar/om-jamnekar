@@ -9,11 +9,11 @@ export default function Testimonials() {
     <section className="py-20 relative overflow-hidden">
       {/* Background Quote Icons */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-32 right-20 text-cyan-500/15 text-[10rem] font-bold transform -rotate-12">"</div>
-        <div className="absolute bottom-40 left-1/4 text-cyan-300/15 text-[14rem] font-bold transform rotate-45">"</div>
-        <div className="absolute bottom-20 right-16 text-cyan-400/15 text-[8rem] font-bold transform -rotate-30">"</div>
-        <div className="absolute top-1/2 left-16 text-cyan-500/15 text-[16rem] font-bold transform rotate-90">"</div>
-        <div className="absolute bottom-60 right-1/4 text-cyan-400/15 text-[11rem] font-bold transform rotate-12">"</div>
+        <div className="absolute top-32 right-20 text-cyan-500/15 text-[10rem] font-bold transform -rotate-12">&ldquo;</div>
+        <div className="absolute bottom-40 left-1/4 text-cyan-300/15 text-[14rem] font-bold transform rotate-45">&ldquo;</div>
+        <div className="absolute bottom-20 right-16 text-cyan-400/15 text-[8rem] font-bold transform -rotate-30">&ldquo;</div>
+        <div className="absolute top-1/2 left-16 text-cyan-500/15 text-[16rem] font-bold transform rotate-90">&ldquo;</div>
+        <div className="absolute bottom-60 right-1/4 text-cyan-400/15 text-[11rem] font-bold transform rotate-12">&ldquo;</div>
       </div>
       
       <Container>
@@ -28,7 +28,7 @@ export default function Testimonials() {
               <div className="relative bg-black border border-gray-900 rounded-2xl p-8 max-w-4xl shadow-2xl hover:shadow-cyan-500/10 transition-all duration-300 hover:border-cyan-500/30">
                 {/* Enhanced quote mark with glow effect */}
                 <div className="absolute -top-4 left-8 w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center border-4 border-gray-800 shadow-lg hover:scale-110 transition-transform duration-300">
-                  <span className="text-white text-3xl font-bold drop-shadow-lg">"</span>
+                  <span className="text-white text-3xl font-bold drop-shadow-lg">&ldquo;</span>
                 </div>
                 
                 {/* Testimonial content with better styling */}
