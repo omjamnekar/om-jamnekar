@@ -1,30 +1,31 @@
 import Container from "@/components/Container";
 import SectionHeading from "@/components/SectionHeading";
 import "@/app/styles/timeline.css";
+import { experiences } from "@/data/experience";
 
-const experiences = [
-  {
-    company: "QPlay.cz",
-    role: "Full-Stack Web Developer",
-    period: "October, 2023 — March, 2024",
-    description: "Adding features to an already built page. Minor website modifications. The project was ended in March 2024.",
-    link: "https://qplay.cz"
-  },
-  {
-    company: "Pixelnite",
-    role: "Full-Stack Web Developer",
-    period: "July, 2024 — Present",
-    description: "Website for minecraft server called Pixelnite. It contains the current number of players on a server, news, admin team and other information.",
-    link: "https://pixelnite.eu"
-  },
-  {
-    company: "Pgames.cz",
-    role: "Full-Stack Web Developer",
-    period: "April, 2025 — July, 2025",
-    description: "Made a fully functional website for a minecraft server. It is Full-Stack website containing also info panel for the players to manage their account.",
-    link: "https://pgames.cz"
-  }
-];
+// const experiences = [
+//   {
+//     company: "QPlay.cz",
+//     role: "Full-Stack Web Developer",
+//     period: "October, 2023 — March, 2024",
+//     description: "Adding features to an already built page. Minor website modifications. The project was ended in March 2024.",
+//     link: "https://qplay.cz"
+//   },
+//   {
+//     company: "Pixelnite",
+//     role: "Full-Stack Web Developer",
+//     period: "July, 2024 — Present",
+//     description: "Website for minecraft server called Pixelnite. It contains the current number of players on a server, news, admin team and other information.",
+//     link: "https://pixelnite.eu"
+//   },
+//   {
+//     company: "Pgames.cz",
+//     role: "Full-Stack Web Developer",
+//     period: "April, 2025 — July, 2025",
+//     description: "Made a fully functional website for a minecraft server. It is Full-Stack website containing also info panel for the players to manage their account.",
+//     link: "https://pgames.cz"
+//   }
+// ];
 
 export default function Experience() {
   return (
@@ -48,7 +49,7 @@ export default function Experience() {
                   </h3>
                   <h4 className="text-white font-bold text-lg">{exp.role}</h4>
                   <div className="date text-gray-400 text-sm mt-2 font-medium">{exp.period}</div>
-                  <div className="description text-gray-300 mt-3 leading-relaxed">{exp.description}</div>
+                  <div className="description text-gray-300 mt-3 leading-relaxed">{exp.summary}</div>
                 </div>
               </div>
             ))}

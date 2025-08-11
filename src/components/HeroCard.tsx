@@ -18,7 +18,7 @@ export default function HeroCard() {
               </p>
               
               <p className="text-gray-300 leading-relaxed max-w-2xl">
-                I&apos;m 16-year-old {site.title}. I have been programming for more than 6 years. I create professional websites.
+                I&apos;m a 21-year-old {site.title}. I have been programming for more than 3 years. I create professional Apps.
               </p>
             </div>
             

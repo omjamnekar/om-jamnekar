@@ -67,8 +67,8 @@ export default function Home() {
               ))}
             </div>
             <div className="mt-8">
-              <Link 
-                href="/projects" 
+              <Link
+                href="/projects"
                 className="inline-flex items-center text-sm text-cyan-400 hover:text-cyan-300 transition-colors"
               >
                 More... →

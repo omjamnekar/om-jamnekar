@@ -1,37 +1,18 @@
 export type Experience = {
   company: string;
   role: string;
-  start: string;
-  end?: string;
+  period: string;
   summary: string;
   link?: string;
 };
 
 export const experiences: Experience[] = [
   {
-    company: "QPlay.cz",
-    role: "Full-Stack Web Developer",
-    start: "October, 2023",
-    end: "March, 2024",
+    company: "WhatBytes",
+    role: "Flutter developer intern",
+    period: "June 2025 — Current",
     summary:
-      "Adding features to an already built page. Minor website modifications. The project was ended in March 2024.",
-    link: "https://qplay.cz",
-  },
-  {
-    company: "Pixelnite",
-    role: "Full-Stack Web Developer",
-    start: "July, 2024",
-    summary:
-      "Website for minecraft server called Pixelnite. It contains the current number of players on a server, news, admin team and other information.",
-    link: "#",
-  },
-  {
-    company: "Pgames.cz",
-    role: "Full-Stack Web Developer",
-    start: "April, 2025",
-    end: "July, 2025",
-    summary:
-      "Made a fully functional website for a minecraft server. It is Full-Stack website containing also info panel for the players to manage their account.",
-    link: "https://pgames.cz",
+      "Built high-performance Flutter apps using clean architecture and responsive UI, WebSocket integration. Integrated with APIs and real-time data with sockets like Bloc and MethodChannel, like Riverpod and more often packages to build. Took part in code reviews, sprint meetings, and feature planning. Used Git, Figma, Slack, Postman for development and collaboration. Learned from mentors to improve code quality and app deployment. Contributed to each world, user-focused projects.",
+    link: "https://www.whatbytes.com/",
   },
 ];

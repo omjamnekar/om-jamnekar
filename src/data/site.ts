@@ -1,12 +1,13 @@
 export const site = {
-  name: "Your Name",
-  title: "Full-Stack Developer",
-  email: "you@example.com",
-  location: "Your City, Country",
+  name: "Om Jamnekar",
+  title: "Flutter Developer",
+  email: "omjjamnekar@gmail.com",
+  phone: "91+7738314857",
+  location: "Toronto, Canada (Remote)",
   socials: {
-    github: "https://github.com/your",
-    twitter: "https://x.com/your",
-    instagram: "https://instagram.com/your",
-    linkedin: "https://www.linkedin.com/in/your/",
+    github: "https://github.com/omjamnekar",
+    twitter: "https://x.com/OmJamnekar",
+    instagram: "https://instagram.com/om_jamnekar",
+    linkedin: "https://linkedin.com/in/om-jamnekar-961aa5256/",
   },
 } as const;
