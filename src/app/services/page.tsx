@@ -83,7 +83,7 @@ export default function ServicesPage() {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Clear Communication</h3>
                 <p className="text-gray-300">
-                  Regular updates and transparent communication throughout the project lifecycle. You're always in the loop.
+                  Regular updates and transparent communication throughout the project lifecycle. You&apos;re always in the loop.
                 </p>
               </div>
 

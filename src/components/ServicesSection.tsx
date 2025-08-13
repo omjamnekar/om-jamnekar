@@ -95,7 +95,7 @@ export default function ServicesSection() {
           </p>
 
           <div className="grid md:grid-cols-2 gap-6">
-            {services.map((service, index) => (
+            {services.map((service) => (
               <div
                 key={service.title}
                 className="group bg-gray-950 border border-gray-800 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105"

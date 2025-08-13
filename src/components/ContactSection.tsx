@@ -201,7 +201,7 @@ export default function ContactSection() {
           >
             <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
             <h2 className="text-2xl font-bold text-white mb-2">Thank You!</h2>
-            <p className="text-gray-300">Your message has been sent successfully. I'll get back to you soon!</p>
+            <p className="text-gray-300">Your message has been sent successfully. I&apos;ll get back to you soon!</p>
           </motion.div>
         </Container>
       </section>
@@ -211,9 +211,9 @@ export default function ContactSection() {
   return (
     <section id="contact" className="py-20">
       <Container>
-        <SectionHeading>Let's Work Together</SectionHeading>
+        <SectionHeading>Let&apos;s Work Together</SectionHeading>
         <p className="text-gray-300 text-center mt-4 mb-12 max-w-2xl mx-auto">
-          Ready to bring your project to life? Let's discuss your ideas and create something amazing together.
+          Ready to bring your project to life? Let&apos;s discuss your ideas and create something amazing together.
         </p>
 
         <div className="grid lg:grid-cols-2 gap-12">
@@ -593,6 +593,7 @@ export default function ContactSection() {
                             <div className="flex items-center space-x-2 opacity-0 group-hover:opacity-100 transition-opacity">
                               {documentPreviews[`${category}_${file.name}`] && (
                                 <div className="w-8 h-8 rounded overflow-hidden border border-gray-600">
+                                  {/* eslint-disable-next-line @next/next/no-img-element */}
                                   <img 
                                     src={documentPreviews[`${category}_${file.name}`]} 
                                     alt="Preview" 

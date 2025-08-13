@@ -14,7 +14,7 @@ export default function ClientLogos() {
     <section className="py-16 border-t border-gray-800">
       <Container>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
-          {clients.map((client, index) => (
+          {clients.map((client) => (
             <div
               key={client.name}
               className="group flex items-center justify-center"

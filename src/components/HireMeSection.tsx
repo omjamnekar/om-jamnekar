@@ -45,7 +45,7 @@ export default function HireMeSection() {
         <div>
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Hire Me Full-Time</h2>
           <p className="text-gray-600 dark:text-gray-400">
-            Looking for a permanent role? Let's discuss opportunities.
+            Looking for a permanent role? Let&apos;s discuss opportunities.
           </p>
         </div>
       </div>

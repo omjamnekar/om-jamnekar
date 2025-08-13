@@ -331,10 +331,10 @@ export default function AboutPage() {
           <Container>
             <div className="bg-gray-900 border border-gray-800 rounded-lg p-8 text-center">
               <h2 className="text-2xl font-bold text-white mb-4">
-                Let's Work Together
+                Let&apos;s Work Together
               </h2>
               <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-                I'm always interested in new opportunities and exciting projects. 
+                I&apos;m always interested in new opportunities and exciting projects. 
                 Whether you have a project in mind or just want to chat about technology, 
                 feel free to reach out!
               </p>
