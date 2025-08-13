@@ -342,6 +342,7 @@ export default function AboutPage() {
                 <Link
                   href="/contact"
                   className="inline-flex items-center justify-center px-6 py-3 bg-cyan-400 text-black font-medium rounded-lg hover:bg-cyan-300 transition-colors"
+                  style={{ color: "#fff", opacity: 1 }}
                 >
                   Get in Touch
                 </Link>

@@ -243,6 +243,21 @@ export const workExperience = [
       "Collaborated using Git, Figma, Slack, and Postman",
     ],
   },
+
+  {
+    company: "Freelancer",
+    role: "Fullstack Flutter Developer",
+    period: "Jan 2023 to May 2025",
+    location: "Remote",
+    description:
+      "Worked with multiple clients to deliver custom mobile and web applications using Flutter. Responsible for full project lifecycle including requirements gathering, UI/UX design, development, testing, deployment, and maintenance.",
+    achievements: [
+      "Delivered 5+ cross-platform apps for clients in e-commerce, education, and healthcare domains",
+      "Implemented RESTful API integrations, push notifications, and payment gateways",
+      "Provided ongoing support and feature enhancements based on client feedback",
+      "Managed project timelines and communicated directly with clients to ensure satisfaction",
+    ],
+  },
 ];
 
 // Additional sections you can fill out later

@@ -2,6 +2,7 @@ import Container from "@/components/Container";
 import HiringForm from "@/components/HiringForm";
 import FreelanceClientForm from "@/components/FreelanceClientForm";
 import type { Metadata } from "next";
+import { personalInfo } from "@/data/about";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -18,8 +19,8 @@ export default function ContactPage() {
               I’d love to hear about your project. Send a message and I’ll get back within 24–48 hours.
             </p>
             <div className="mt-6 space-y-2 text-sm text-black/70 dark:text-white/70">
-              <p>Email: <a className="underline underline-offset-4" href="mailto:you@example.com">you@example.com</a></p>
-              <p>Location: Your City, Country</p>
+               <a className="underline underline-offset-4" href={`mailto:${personalInfo.email}`}>{personalInfo.email}</a>
+              <p>Location: {personalInfo.location}</p>
             </div>
           </div>
           <div className="space-y-12">

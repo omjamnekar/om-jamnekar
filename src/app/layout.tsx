@@ -16,13 +16,13 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Portfolio | Your Name",
+    default: "Portfolio | Om Jamnekar",
     template: "%s | Portfolio",
   },
   description: "Personal portfolio showcasing projects, skills, and contact information.",
   metadataBase: new URL("http://localhost:3000"),
   openGraph: {
-    title: "Portfolio | Your Name",
+    title: "Portfolio | Om Jamnekar",
     description: "Projects, experience, and ways to get in touch.",
     type: "website",
     url: "/",
