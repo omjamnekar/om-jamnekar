@@ -3,27 +3,9 @@
 import Container from "@/components/Container";
 import SectionHeading from "@/components/SectionHeading";
 import { Icon } from "@iconify/react";
+import { technologies2, technologies1 } from "@/data/work"; 
 
-// Technologies split into two lines for better display
-const technologies1 = [
-  { name: "Vite", icon: "logos:vitejs" },
-  { name: "HTML", icon: "logos:html-5" },
-  { name: "CSS", icon: "logos:css-3" },
-  { name: "JavaScript", icon: "logos:javascript" },
-  { name: "TypeScript", icon: "logos:typescript-icon" },
-  { name: "Hugo", icon: "logos:hugo" },
-  { name: "React", icon: "logos:react" },
-];
 
-const technologies2 = [
-  { name: "Spring", icon: "logos:spring-icon" },
-  { name: "Express", icon: "simple-icons:express" },
-  { name: "PostgreSQL", icon: "logos:postgresql" },
-  { name: "MariaDB", icon: "logos:mariadb-icon" },
-  { name: "Node.js", icon: "logos:nodejs-icon" },
-  { name: "Rust", icon: "logos:rust" },
-  { name: "Go", icon: "logos:go" },
-];
 
 export default function TechStack() {
   return (
