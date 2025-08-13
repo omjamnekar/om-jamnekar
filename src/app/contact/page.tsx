@@ -1,5 +1,6 @@
 import Container from "@/components/Container";
-import ContactForm from "@/components/ContactForm";
+import HiringForm from "@/components/HiringForm";
+import FreelanceClientForm from "@/components/FreelanceClientForm";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -21,8 +22,13 @@ export default function ContactPage() {
               <p>Location: Your City, Country</p>
             </div>
           </div>
-          <div className="rounded-xl border border-black/10 dark:border-white/10 p-6 bg-black/[.02] dark:bg-white/[.03]">
-            <ContactForm />
+          <div className="space-y-12">
+            <div className="rounded-xl border border-black/10 dark:border-white/10 p-6 bg-black/[.02] dark:bg-white/[.03]">
+              <HiringForm />
+            </div>
+            <div className="rounded-xl border border-black/10 dark:border-white/10 p-6 bg-black/[.02] dark:bg-white/[.03]">
+              <FreelanceClientForm />
+            </div>
           </div>
         </div>
       </Container>

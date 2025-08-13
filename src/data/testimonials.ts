@@ -6,9 +6,8 @@ export type Testimonial = {
 
 export const testimonials: Testimonial[] = [
   {
-    quote:
-      "Working together was excellent—fast delivery, clear communication, and thoughtful suggestions that improved the final result.",
-    author: "Client Name",
-    role: "Owner, Example Inc.",
+    quote: "Exceeded our expectations in every way.",
+    author: "Alice Johnson",
+    role: "Product Manager, Gamma LLC",
   },
 ];

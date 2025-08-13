@@ -3,7 +3,7 @@ export const site = {
   title: "Flutter Developer",
   email: "omjjamnekar@gmail.com",
   phone: "91+7738314857",
-  location: "Toronto, Canada (Remote)",
+  location: "Mumbai, India",
   socials: {
     github: "https://github.com/omjamnekar",
     twitter: "https://x.com/OmJamnekar",

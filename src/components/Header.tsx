@@ -49,9 +49,9 @@ export default function Header() {
             ))}
           </ul>
           
-          <div className="text-gray-400 text-sm">
+          {/* <div className="text-gray-400 text-sm">
             Čeština
-          </div>
+          </div> */}
         </nav>
       </Container>
     </header>
