@@ -32,12 +32,12 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           ))}
         </div>
         <div className="mt-8 flex gap-4">
-          {project.url && (
-            <a href={project.url} target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-md bg-foreground text-background text-sm">Visit</a>
+          {project.image && (
+            <a href={project.image} target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-md bg-foreground text-background text-sm">Visit</a>
           )}
-          {project.repo && (
+          {/* {project. && (
             <a href={project.repo} target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-md border border-black/10 dark:border-white/20 text-sm">Source</a>
-          )}
+          )} */}
         </div>
       </Container>
     </div>
