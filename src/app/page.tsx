@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Container from "@/components/Container";
-import { projects, type Project } from "@/data/projects";
 import Experience from "@/components/Experience";
 import SectionHeading from "@/components/SectionHeading";
 import HeroCard from "@/components/HeroCard";
@@ -9,6 +8,8 @@ import TechStack from "@/components/TechStack";
 import Testimonials from "@/components/Testimonials";
 import LatestBlogPosts from "@/components/LatestBlogPosts";
 import CTABanner from "@/components/CTABanner";
+import MyWorkHomeSection from "@/components/MyWorkHome";
+import ProjectSection from "@/components/Projects";
 
 export default function Home() {
   return (
@@ -24,34 +25,10 @@ export default function Home() {
         <Experience />
 
         {/* My Work Section */}
-        <section id="work" className="py-12">
-          <Container>
-            <SectionHeading>My work</SectionHeading>
-            <div className="mt-8 space-y-6">
-              {projects.slice(0, 4).map((p: Project) => (
-                <WorkCard
-                  key={p.slug}
-                  href={`/projects/${p.slug}`}
-                  title={p.title}
-                  summary={p.summary}
-                  tags={p.tags}
-                  image={p.image}
-                />
-              ))}
-            </div>
-            <div className="mt-8">
-              <Link 
-                href="/projects" 
-                className="inline-flex items-center text-sm text-cyan-400 hover:text-cyan-300 transition-colors"
-              >
-                View all projects →
-              </Link>
-            </div>
-          </Container>
-        </section>
+        <MyWorkHomeSection />
 
         {/* Personal Projects Section */}
-        <section className="py-12">
+        {/* <section className="py-12">
           <Container>
             <SectionHeading>My personal projects</SectionHeading>
             <div className="mt-8 grid gap-6 sm:grid-cols-2">
@@ -75,10 +52,12 @@ export default function Home() {
               </Link>
             </div>
           </Container>
-        </section>
+        </section> */}
+
+        <ProjectSection />
 
         {/* Testimonials Section */}
-        <Testimonials />
+        {/* <Testimonials /> */}
 
         {/* Latest Blog Posts */}
         <LatestBlogPosts />
