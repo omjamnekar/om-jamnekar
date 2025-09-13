@@ -33,11 +33,11 @@ export default function MyWorkHomeSePrction() {
         loading: false,
         error: null,
       });
-    } catch (e: any) {
+    } catch (err: unknown) {
       setState({
         data: null,
         loading: false,
-        error: e.message ?? "Unknown error occure",
+        error: err instanceof Error ? err.message : "Unknown error occurred",
       });
     }
   };

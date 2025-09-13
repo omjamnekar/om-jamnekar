@@ -1,14 +1,7 @@
 import { Metadata } from "next";
 import Container from "@/components/Container";
 import SectionHeading from "@/components/SectionHeading";
-import {
-  personalInfo,
-  education,
-  certifications,
-  skillCategories,
-  projects as aboutProjects,
-  additionalSections,
-} from "@/data/about";
+import { personalInfo, education, additionalSections } from "@/data/about";
 import Link from "next/link";
 import "@/app/styles/timeline.css";
 import AboutHeroSection from "./AboutHero";

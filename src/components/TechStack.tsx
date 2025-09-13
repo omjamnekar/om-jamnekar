@@ -25,22 +25,24 @@ export default function TechStack() {
         if (!res.ok) {
           throw new Error("Failed to fetch user details");
         }
-      const json = await res.json();
-      const skills = json["skillcategorys"].flatMap((c: TechStack) => c.skills);
-      const mid = Math.ceil(skills.length / 2);
-      const list1 = skills.slice(0, mid);
-      const list2 = skills.slice(mid);
+        const json = await res.json();
+        const skills = json["skillcategorys"].flatMap(
+          (c: TechStack) => c.skills
+        );
+        const mid = Math.ceil(skills.length / 2);
+        const list1 = skills.slice(0, mid);
+        const list2 = skills.slice(mid);
 
         setState({
           data: [list1, list2],
           loading: false,
           error: null,
         });
-      } catch (err: any) {
+      } catch (err: unknown) {
         setState({
           data: null,
           loading: false,
-          error: err.message || "Unknown error occurred",
+          error: err instanceof Error ? err.message : "Unknown error occurred",
         });
       }
     }
@@ -53,7 +55,7 @@ export default function TechStack() {
         <SectionHeading>What I work with</SectionHeading>
 
         {/* Loading and error handling */}
-        {state.loading && <TechStackSkeleton/>}
+        {state.loading && <TechStackSkeleton />}
         {state.error && (
           <div className="text-center text-red-500 py-8">{state.error}</div>
         )}
@@ -153,9 +155,8 @@ export default function TechStack() {
   );
 }
 
-
 // components/TechStackSkeleton.tsx
- function TechStackSkeleton() {
+function TechStackSkeleton() {
   return (
     <div className="mt-8 space-y-4">
       {/* First line skeleton */}

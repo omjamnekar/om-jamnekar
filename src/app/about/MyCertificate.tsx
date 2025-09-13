@@ -4,7 +4,6 @@ import Container from "@/components/Container";
 import SectionHeading from "@/components/SectionHeading";
 import ApiConstant from "@/core/constants/api";
 import { Certification, CertificationState } from "@/core/model/certifications";
-import { Certificate } from "crypto";
 
 export default function MyCertificate() {
   const [certificateState, setCertificateState] = useState<CertificationState>({
@@ -32,11 +31,16 @@ export default function MyCertificate() {
           loading: false,
           error: null,
         });
-      } catch (e: any) {
+      } catch (e: unknown) {
+        let message = "Unknown error";
+        if (e instanceof Error) {
+          message = e.message;
+        }
+
         setCertificateState({
           data: null,
           loading: false,
-          error: e.message ?? "Unknown error",
+          error: message,
         });
       }
     };

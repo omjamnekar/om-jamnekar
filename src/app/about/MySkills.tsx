@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import Container from "@/components/Container";
 import SectionHeading from "@/components/SectionHeading";
 import ApiConstant from "@/core/constants/api";
-import { Skill } from "@/data/skills";
 import { Skills, SkillState } from "@/core/model/skills";
 
 export default function MySkill() {
@@ -32,13 +31,14 @@ export default function MySkill() {
           loading: false,
           error: null,
         });
-      } catch (e: any) {
+      } catch (e: unknown) {
         setSkillState({
           data: null,
           loading: false,
-          error: e.message ?? "Unknown error",
+          error: e instanceof Error ? e.message : "Unknown error",
         });
       }
+
     };
 
     fetchSkills();
