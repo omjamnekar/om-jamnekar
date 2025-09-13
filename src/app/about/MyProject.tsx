@@ -5,6 +5,7 @@ import Container from "@/components/Container";
 import SectionHeading from "@/components/SectionHeading";
 import { Project, ProjectState } from "@/core/model/project";
 import ApiConstant from "@/core/constants/api";
+import { Link } from "lucide-react";
 
 export default function MyProjectSection() {
   const [state, setState] = useState<ProjectState>({
@@ -25,8 +26,17 @@ export default function MyProjectSection() {
         const json = await res.json();
         const data: Project[] = json["projects"];
         setState({ data, loading: false, error: null });
-      } catch (err: any) {
-        setState({ data: null, loading: false, error: err.message });
+      } catch (err: unknown) {
+        let message = "Unknown error";
+        if (err instanceof Error) {
+          message = err.message;
+        }
+
+        setState({
+          data: null,
+          loading: false,
+          error: message,
+        });
       }
     };
 
@@ -132,12 +142,12 @@ export default function MyProjectSection() {
               ))}
             </div>
             <div className="mt-8">
-              <a
+              <Link
                 href="/projects"
                 className="inline-flex items-center text-sm text-cyan-400 hover:text-cyan-300 transition-colors"
               >
                 View all projects →
-              </a>
+              </Link>
             </div>
           </>
         )}

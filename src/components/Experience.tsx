@@ -2,7 +2,6 @@
 import Container from "@/components/Container";
 import SectionHeading from "@/components/SectionHeading";
 import "@/app/styles/timeline.css";
-import { experiences } from "@/data/experience";
 import { ExperienceState } from "@/core/model/experiance";
 import type { Experience } from "@/core/model/experiance";
 import { useEffect, useState } from "react";
@@ -32,11 +31,11 @@ export default function Experience() {
           loading: false,
           error: null,
         });
-      } catch (e: any) {
+      } catch (err: unknown) {
         setState({
           data: null,
           loading: false,
-          error: e.message ?? "Unknown error occure",
+          error: err instanceof Error ? err.message : "Unknown error occurred",
         });
       }
     };

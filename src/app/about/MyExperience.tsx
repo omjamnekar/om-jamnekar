@@ -31,11 +31,16 @@ export default function MyExperience() {
           loading: false,
           error: null,
         });
-      } catch (e: any) {
+      } catch (e: unknown) {
+        let message = "Unknown error";
+        if (e instanceof Error) {
+          message = e.message;
+        }
+
         setExperienceState({
           data: null,
           loading: false,
-          error: e.message ?? "Unknown error",
+          error: message,
         });
       }
     };

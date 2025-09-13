@@ -23,8 +23,12 @@ export default function ProjectSection() {
         const data: Project[] = json["projects"];
 
         setState({ data, loading: false, error: null });
-      } catch (err: any) {
-        setState({ data: null, loading: false, error: err.message });
+      } catch (err: unknown) {
+        setState({
+          data: null,
+          loading: false,
+          error: err instanceof Error ? err.message : "Unknown error occurred",
+        });
       }
     };
     fetchdata();

@@ -30,11 +30,16 @@ export default function AboutHeroSection() {
           error: null,
           loading: false,
         });
-      } catch (e: any) {
+      } catch (e: unknown) {
+        let message = "Unknown Error";
+        if (e instanceof Error) {
+          message = e.message;
+        }
+
         setStateInfo({
           data: null,
           loading: false,
-          error: e.message ?? "Unknown Error",
+          error: message,
         });
       }
     };
