@@ -2,7 +2,7 @@ import Container from "@/components/Container";
 import SectionHeading from "@/components/SectionHeading";
 import ServicesSection from "@/components/ServicesSection";
 import FAQSection from "@/components/FAQSection";
-import CTABanner from "@/components/CTABanner";
+// import CTABanner from "@/components/CTABanner";
 import PageTransition from "@/components/animation/PageTransition";
 
 export default function ServicesPage() {
