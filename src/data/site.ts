@@ -1,6 +1,6 @@
 export const site = {
   name: "Om Jamnekar",
-  title: "Flutter Developer",
+  title: "Application Developer",
   email: "omjjamnekar@gmail.com",
   phone: "91+7738314857",
   location: "Mumbai, India",

@@ -6,12 +6,20 @@ export type Education = {
   period: string;
   location?: string;
 };
-
 export type Certification = {
+  _id: string;
   name: string;
   issuer?: string;
-  year?: string;
-  link?: string;
+  expired?: string;
+  issueDate?: string;
+  credentialId?: string;
+  credentialUrl?: string;
+  skills?: string[];
+  description?: string;
+  certificateUrl?: string;
+  displayOrder?: number;
+  isActive?: boolean;
+  updatedAt?: string;
 };
 
 export type Project = {
@@ -77,32 +85,163 @@ export const education: Education[] = [
 // Certifications
 export const certifications: Certification[] = [
   {
-    name: "Flutter and Dart -The Complete Guide",
-    issuer: "Online Course",
+    _id: "689c759d95e713fcd6b32e91",
+    name: "The Complete 2024 Web Development Bootcamp",
+    issuer: "Udemy",
+    issueDate: "2024-05-01T00:00:00.000Z",
+    expired: "2024-12-01T00:00:00.000Z",
+    credentialId: "UC-fd3ffbf0-4b7b-4159-8f3d-f6d4bbb06251",
+    skills: ["Nodejs", "MongoDB", "Express", "React"],
+    description: "Instructors Dr. Angela Yu, Developer and Lead Instructor",
+    credentialUrl: "https://ude.my/UC-fd3ffbf0-4b7b-4159-8f3d-f6d4bbb06251a",
+    certificateUrl:
+      "https://udemy-certificate.s3.amazonaws.com/image/UC-fd3ffbf0-4b7b-4159-8f3d-f6d4bbb06251.jpg",
+    displayOrder: 0,
+    isActive: true,
+    updatedAt: "2025-08-15T16:59:32.263Z",
   },
   {
-    name: "Microsoft Azure Certifications",
-    issuer: "Microsoft",
-  },
-  {
+    
+    _id: "689c75aa95e713fcd6b32e92",
     name: "Understanding TypeScript",
-    issuer: "Online Course",
+    issuer: "Udemy",
+    issueDate: "2024-05-01T00:00:00.000Z",
+    expired: "2024-12-01T00:00:00.000Z",
+    credentialId: "UC-f3514347-8fc8-45b9-ad7a-f6485575e045",
+    skills: ["Typerscript"],
+    description: "Maximilian Schwarzmüller",
+    credentialUrl:
+      "https://www.udemy.com/certificate/UC-f3514347-8fc8-45b9-ad7a-f6485575e045/",
+    certificateUrl:
+      "https://udemy-certificate.s3.amazonaws.com/image/UC-f3514347-8fc8-45b9-ad7a-f6485575e045.jpg",
   },
   {
-    name: "The Complete Web Development",
-    issuer: "Online Course",
+    
+    _id: "689c75bf95e713fcd6b32e93",
+    name: "Complete Web Design: From Figma to Webflow to Freelancing",
+    issuer: "Udemy",
+    issueDate: "2023-11-01T00:00:00.000Z",
+    expired: "2024-04-01T00:00:00.000Z",
+    credentialId: "UC-89f95dc6-63e0-4901-8ffe-93b27b97dbf7",
+    skills: [
+      "Web Design",
+      "Figma (Software)",
+      "Webflow",
+      "Wireframing",
+      "UI",
+      "Lean UX",
+      "Layout Design",
+      "Page Layout",
+      "Landing Pages",
+      "Visual Hierarchy",
+      "Content Management Systems (CMS)",
+      "Dynamic Page",
+    ],
+    description: "",
+    credentialUrl:
+      "https://udemy-certificate.s3.amazonaws.com/image/UC-89f95dc6-63e0-4901-8ffe-93b27b97dbf7.jpg",
+    certificateUrl:
+      "https://www.udemy.com/certificate/UC-7e24a7b2-ff04-4b63-8dcf-ef2930a1a5de/",
   },
   {
-    name: "Introduction to Programming Using HTML and CSS",
-    issuer: "Online Course",
+    
+    _id: "689c75d195e713fcd6b32e94",
+    name: "Flutter & Dart - The Complete Guide",
+    issuer: "Udemy",
+    issueDate: "2023-05-01T00:00:00.000Z",
+    expired: "2023-10-01T00:00:00.000Z",
+    credentialId: "UC-af342ff6-fa57-4419-b563-69acba3289d4",
+    credentialUrl: "http://ude.my/UC-af342ff6-fa57-4419-b563-69acba3289d4",
+    skills: [
+      "Google Cloud Platform (GCP)",
+      "Firebase",
+      "Android Studio",
+      "flutter",
+      "http",
+      "Geo Map",
+      "Dart",
+    ],
+    description: "Academind by Maximilian Schwarzmüller",
+    certificateUrl:
+      "https://udemy-certificate.s3.amazonaws.com/image/UC-af342ff6-fa57-4419-b563-69acba3289d4.jpg",
   },
   {
-    name: "Go: The complete Developer's Guide (Golang)",
-    issuer: "Online Course",
+    
+    _id: "689c75e295e713fcd6b32e95",
+    name: "Flutter Advanced Course - Clean Architecture with MVVM",
+    issuer: "Udemy",
+    issueDate: "2023-11-01T00:00:00.000Z",
+    expired: "2024-04-01T00:00:00.000Z",
+    credentialId: "UC-8d037eca-dd14-472f-900e-9d39eb78a906",
+    skills: ["LVVM", "Flutter Advance"],
+    description: "Mina Farid",
+    credentialUrl:
+      "https://udemy.com/certificate/UC-8d037eca-dd14-472f-900e-9d39eb78a906/",
+    certificateUrl:
+      "https://udemy-certificate.s3.amazonaws.com/image/UC-8d037eca-dd14-472f-900e-9d39eb78a906.jpg",
   },
   {
+   
+    _id: "689c75f095e713fcd6b32e96",
+    name: "Go :The complete Developers Guide to Golang",
+    issuer: "Udemy",
+    issueDate: "2023-11-01T00:00:00.000Z",
+    expired: "2023-11-01T00:00:00.000Z",
+    credentialId: "UC-cb2eb5c7-1538-4296-aebc-b8ff421da70f",
+    skills: [
+      "Pointers Management",
+      "Threads",
+      "Goroutine",
+      "HTTP",
+      "References",
+      "Go (Programming Language)",
+    ],
+    description: "Academind by Maximilian Schwarzmüller",
+    credentialUrl:
+      "https://www.udemy.com/certificate/UC-cb2eb5c7-1538-4296-aebc-b8ff421da70f/",
+    certificateUrl:
+      "https://udemy-certificate.s3.amazonaws.com/image/UC-cb2eb5c7-1538-4296-aebc-b8ff421da70f.jpg",
+  },
+  {
+ 
+    _id: "689c75ff95e713fcd6b32e97",
     name: "Ultimate Rust Crash Course",
-    issuer: "Online Course",
+    issuer: "Udemy",
+    issueDate: "2023-10-01T00:00:00.000Z",
+    expired: "2023-10-01T00:00:00.000Z",
+    credentialId: "UC-ff829002-5fa7-4dff-add7-13f8ded1600",
+    credentialUrl: "http://ude.my/UC-ff829002-567-4dff-add7-13f8ded160e0",
+    skills: ["Cargo", "Referancing"],
+    description: "Nethan Stocks",
+    certificateUrl:
+      "https://www.udemy.com/certificate/UC-f4aa3d0f-46a1-4a13-bdc0-bb1a9ec65e7b/",
+  },
+  {
+    
+    _id: "689c760f95e713fcd6b32e98",
+    name: "Microsoft Azure Fundamentals",
+    issuer: "Microsoft",
+    issueDate: "2023-07-01T00:00:00.000Z",
+    expired: "2023-08-01T00:00:00.000Z",
+    credentialId: "",
+    skills: ["fundamental of machine learning", "fundamental of AI"],
+    description: "",
+    certificateUrl:
+      "https://learn.microsoft.com/api/credentials/share/en-us/OmJamnekar/CE7F8138C2F3E8C9",
+  },
+  {
+  
+    _id: "689c761d95e713fcd6b32e99",
+    name: "Introduction to Programming Using HTML and CSS",
+    issuer: "Udemy",
+    expired: "2022-02-01T00:00:00.000Z",
+    issueDate: "2023-07-01T00:00:00.000Z",
+    credentialId: "UC-76ec8bb6-3c70-4eb4-bab6-7aa7b8834dfe",
+    credentialUrl: "http://ude.my/UC-76ec8bb6-3c70-4eb4-bab6-7aa7b8834dfe",
+    skills: ["HTML", "CSS", "Web Development", "Frontend", "Responsive Design"],
+    description: "Jonas Schmedtmann",
+    certificateUrl:
+      "https://udemy-certificate.s3.amazonaws.com/image/UC-76ec8bb6-3c70-4eb4-bab6-7aa7b8834dfe.jpg",
   },
 ];
 

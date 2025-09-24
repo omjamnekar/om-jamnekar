@@ -1,8 +1,19 @@
+"use client";
+import React, { useState } from "react";
 import Container from "@/components/Container";
 import { site } from "@/data/site";
-import { Mail, Github, Instagram, MapPin } from "lucide-react";
+import {
+  Mail,
+  Github,
+  Instagram,
+  MapPin,
+  MoreVertical,
+  Linkedin,
+} from "lucide-react";
 
 export default function HeroCard() {
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
   return (
     <section className="pt-16 pb-12">
       <Container>
@@ -12,43 +23,98 @@ export default function HeroCard() {
               <h1 className="text-3xl font-bold mb-2 text-white">
                 {site.name}
               </h1>
-              
-              <p className="text-gray-400 text-sm mb-6 flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-white" /> {site.location}
-              </p>
-              
+              <a
+                href="https://www.google.com/maps?q=Mumbai"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 text-sm mb-6 flex items-center gap-2 hover:underline"
+                aria-label="View location on map"
+              >
+                <MapPin className="w-4 h-4 text-white" /> Mumbai, India
+              </a>
               <p className="text-gray-300 leading-relaxed max-w-2xl">
-                I&apos;m a 21-year-old {site.title}. I have been programming for more than 3 years. I create professional Apps.
+                I&apos;m a 21-year-old {site.title}. I have been programming for
+                more than 3 years. I create professional Apps.
               </p>
             </div>
-            
-            <div className="flex items-center gap-3">
-            <a 
-              href={`mailto:${site.email}`} 
-              className="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-gray-900 hover:bg-gray-800 transition-colors border border-gray-700"
-              aria-label="Email"
-            >
-              <Mail className="w-4 h-4 text-gray-300" />
-            </a>
-            <a 
-              href={site.socials.github} 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-gray-900 hover:bg-gray-800 transition-colors border border-gray-700"
-              aria-label="GitHub"
-            >
-              <Github className="w-4 h-4 text-gray-300" />
-            </a>
-            <a 
-              href={site.socials.instagram} 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-gray-900 hover:bg-gray-800 transition-colors border border-gray-700"
-              aria-label="Instagram"
-            >
-              <Instagram className="w-4 h-4 text-gray-300" />
-            </a>
-          </div>
+
+            {/* Social Links for large screens */}
+            <div className="hidden sm:flex items-center gap-3">
+              <a
+                href={`mailto:${site.email}`}
+                className="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-gray-900 hover:bg-gray-800 transition-colors border border-gray-700"
+                aria-label="Email"
+              >
+                <Mail className="w-4 h-4 text-gray-300" />
+              </a>
+              <a
+                href={site.socials.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-gray-900 hover:bg-gray-800 transition-colors border border-gray-700"
+                aria-label="GitHub"
+              >
+                <Github className="w-4 h-4 text-gray-300" />
+              </a>
+              <a
+                href={site.socials.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-gray-900 hover:bg-gray-800 transition-colors border border-gray-700"
+                aria-label="Instagram"
+              >
+                <Instagram className="w-4 h-4 text-gray-300" />
+              </a>
+              <a
+                href={site.socials.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-gray-900 hover:bg-gray-800 transition-colors border border-gray-700"
+                aria-label="Linkedin"
+              >
+                <Linkedin className="w-4 h-4 text-gray-300" />
+              </a>
+            </div>
+
+            {/* Dropdown for small screens */}
+            <div className="sm:hidden relative">
+              <button
+                onClick={() => setDropdownOpen((v) => !v)}
+                className="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-gray-900 hover:bg-gray-800 transition-colors border border-gray-700"
+                aria-label="More"
+              >
+                <MoreVertical className="w-4 h-4 text-gray-300" />
+              </button>
+              {dropdownOpen && (
+                <div className="absolute right-0 mt-2 w-40 bg-gray-900 border border-gray-700 rounded-lg shadow-lg z-10">
+                  <a
+                    href={`mailto:${site.email}`}
+                    className="flex items-center gap-2 px-4 py-2 text-gray-300 hover:bg-gray-800 rounded-t-lg"
+                    aria-label="Email"
+                  >
+                    <Mail className="w-4 h-4" /> Email
+                  </a>
+                  <a
+                    href={site.socials.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-4 py-2 text-gray-300 hover:bg-gray-800"
+                    aria-label="GitHub"
+                  >
+                    <Github className="w-4 h-4" /> GitHub
+                  </a>
+                  <a
+                    href={site.socials.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-4 py-2 text-gray-300 hover:bg-gray-800 rounded-b-lg"
+                    aria-label="Instagram"
+                  >
+                    <Instagram className="w-4 h-4" /> Instagram
+                  </a>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </Container>
