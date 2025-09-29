@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -19,7 +19,8 @@ export const metadata: Metadata = {
     default: "Portfolio | Om Jamnekar",
     template: "%s | Portfolio",
   },
-  description: "Personal portfolio showcasing projects, skills, and contact information.",
+  description:
+    "Personal portfolio showcasing projects, skills, and contact information.",
   metadataBase: new URL("http://localhost:3000"),
   openGraph: {
     title: "Portfolio | Om Jamnekar",
