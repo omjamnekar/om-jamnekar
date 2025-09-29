@@ -74,6 +74,26 @@ export default function HeroCard() {
               >
                 <Linkedin className="w-4 h-4 text-gray-300" />
               </a>
+              <a
+                href={site.socials.leetcode}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-gray-900 hover:bg-gray-800 transition-colors border border-gray-700"
+                aria-label="LeetCode"
+              >
+                {/* Add LeetCode SVG icon directly */}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  className="w-4 h-4 text-gray-300"
+                >
+                  <path
+                    d="M21.7 7.8c-2.2-2.2-5.8-2.2-8 0l-7.1 7.1c-2.2 2.2-2.2 5.8 0 8l7.1 7.1c2.2 2.2 5.8 2.2 8 0l2.7-2.7a1.25 1.25 0 1 0-1.8-1.8l-2.7 2.7c-1.3 1.3-3.4 1.3-4.7 0l-7.1-7.1c-1.3-1.3-1.3-3.4 0-4.7l7.1-7.1c1.3-1.3 3.4-1.3 4.7 0l2.7 2.7a1.25 1.25 0 1 0 1.8-1.8l-2.7-2.7zm-2.8 8.2a1.25 1.25 0 1 0 0 2.5h6a1.25 1.25 0 1 0 0-2.5h-6z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </a>
             </div>
 
             {/* Dropdown for small screens */}
@@ -103,6 +123,7 @@ export default function HeroCard() {
                   >
                     <Github className="w-4 h-4" /> GitHub
                   </a>
+
                   <a
                     href={site.socials.instagram}
                     target="_blank"

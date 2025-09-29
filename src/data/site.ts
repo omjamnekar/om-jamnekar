@@ -9,5 +9,6 @@ export const site = {
     twitter: "https://x.com/OmJamnekar",
     instagram: "https://instagram.com/om_jamnekar",
     linkedin: "https://linkedin.com/in/om-jamnekar-961aa5256/",
+    leetcode: "https://leetcode.com/u/omjamnekar/",
   },
 } as const;
