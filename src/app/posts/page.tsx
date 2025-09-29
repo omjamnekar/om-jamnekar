@@ -2,7 +2,7 @@ import Container from "@/components/Container";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { posts } from "@/data/posts";
-import PageTransition from "@/components/animation/PageTransition";
+import PageTransition from "@/core/animation/PageTransition";
 
 export const metadata: Metadata = {
   title: "Posts",

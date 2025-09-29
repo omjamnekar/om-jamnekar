@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Container from "@/components/Container";
 import SectionHeading from "@/components/SectionHeading";
 import Link from "next/link";
-import PageTransition from "@/components/animation/PageTransition";
+import PageTransition from "@/core/animation/PageTransition";
 
 export const metadata: Metadata = {
   title: "Work",

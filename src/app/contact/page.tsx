@@ -3,7 +3,7 @@ import HiringForm from "@/components/HiringForm";
 import FreelanceClientForm from "@/components/FreelanceClientForm";
 import type { Metadata } from "next";
 import { personalInfo } from "@/data/about";
-import PageTransition from "@/components/animation/PageTransition";
+import PageTransition from "@/core/animation/PageTransition";
 
 export const metadata: Metadata = {
   title: "Contact",

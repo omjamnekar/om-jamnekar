@@ -13,7 +13,7 @@ import {
 import { site } from "@/data/site";
 import Link from "next/link";
 // import "@/app/styles/timeline.css";
-import PageTransition from "@/components/animation/PageTransition";
+import PageTransition from "@/core/animation/PageTransition";
 
 export const metadata: Metadata = {
   title: "About",

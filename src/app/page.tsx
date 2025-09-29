@@ -5,8 +5,9 @@ import Experience from "@/components/Experience";
 import SectionHeading from "@/components/SectionHeading";
 import HeroCard from "@/components/HeroCard";
 import WorkCard from "@/components/WorkCard";
+
 import TechStack from "@/components/TechStack";
-import PageTransition from "@/components/animation/PageTransition";
+import PageTransition from "@/core/animation/PageTransition";
 // import Testimonials from "@/components/Testimonials";
 // import LatestBlogPosts from "@/components/LatestBlogPosts";
 // import CTABanner from "@/components/CTABanner";

@@ -3,7 +3,7 @@ import SectionHeading from "@/components/SectionHeading";
 import ServicesSection from "@/components/ServicesSection";
 import FAQSection from "@/components/FAQSection";
 // import CTABanner from "@/components/CTABanner";
-import PageTransition from "@/components/animation/PageTransition";
+import PageTransition from "@/core/animation/PageTransition";
 import {
   CommunicationIcon,
   FastIcon,
@@ -11,7 +11,7 @@ import {
   PostSupport,
   QualityIcon,
   ToolIcon,
-} from "@/components/utils/svgs";
+} from "@/core/utils/svgs";
 
 export default function ServicesPage() {
   return (
