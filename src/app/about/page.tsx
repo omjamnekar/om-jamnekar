@@ -101,6 +101,15 @@ export default function AboutPage() {
                       <span>X</span>
                       <span>→</span>
                     </a>
+                    <a
+                      href={site.socials.leetcode}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors"
+                    >
+                      <span>LeetCode</span>
+                      <span>→</span>
+                    </a>
                   </div>
                 </div>
               </div>

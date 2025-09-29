@@ -9,6 +9,7 @@ import {
   MapPin,
   MoreVertical,
   Linkedin,
+  X,
 } from "lucide-react";
 
 export default function HeroCard() {
@@ -57,13 +58,24 @@ export default function HeroCard() {
                 <Github className="w-4 h-4 text-gray-300" />
               </a>
               <a
-                href={site.socials.instagram}
+                href={site.socials.twitter}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-gray-900 hover:bg-gray-800 transition-colors border border-gray-700"
-                aria-label="Instagram"
+                aria-label="X"
               >
-                <Instagram className="w-4 h-4 text-gray-300" />
+                {/* X (Twitter) SVG logo */}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  className="w-4 h-4 text-gray-300"
+                >
+                  <path
+                    d="M17.53 3H21.5L14.42 10.73L22.75 21H16.44L11.38 14.62L5.72 21H1.75L9.23 12.73L1.25 3H7.74L12.36 9.67L17.53 3ZM16.41 19.13H18.13L7.66 4.77H5.82L16.41 19.13Z"
+                    fill="currentColor"
+                  />
+                </svg>
               </a>
               <a
                 href={site.socials.linkedin}
