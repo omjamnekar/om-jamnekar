@@ -12,7 +12,7 @@ import {
 } from "@/data/about";
 import { site } from "@/data/site";
 import Link from "next/link";
-import "@/app/styles/timeline.css";
+// import "@/app/styles/timeline.css";
 import PageTransition from "@/components/animation/PageTransition";
 
 export const metadata: Metadata = {
@@ -169,7 +169,7 @@ export default function AboutPage() {
                     <h3 className="text-lg font-semibold text-white mb-4">
                       {category.category}
                     </h3>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap  cursor-pointer gap-2">
                       {category.skills.map((skill, skillIndex) => (
                         <span
                           key={skillIndex}

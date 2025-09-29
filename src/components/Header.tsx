@@ -6,11 +6,26 @@ import Container from "@/components/Container";
 import { site } from "@/data/site";
 
 const links = [
-  { href: "/about", label: "About" },
-  // { href: "/work", label: "Work" },
-  { href: "/services", label: "Services" },
-  { href: "/posts", label: "Blog" },
-  { href: "/contact", label: "Contact" },
+  {
+    href: "/about",
+    label: "About",
+    description: "Discover my journey, skills, and background.",
+  },
+  {
+    href: "/services",
+    label: "Services",
+    description: "Explore the professional solutions I provide.",
+  },
+  {
+    href: "/posts",
+    label: "Blog",
+    description: "Read insights, tutorials, and industry updates.",
+  },
+  {
+    href: "/contact",
+    label: "Contact",
+    description: "Let’s collaborate—get in touch with me easily.",
+  },
 ];
 
 export default function Header() {
@@ -35,6 +50,7 @@ export default function Header() {
     <header className="bg-black">
       <Container>
         <nav className="flex items-center justify-between h-16">
+          {/* Logo / Name */}
           <Link href="/" className="font-semibold text-white text-lg">
             {site.name}
           </Link>
@@ -42,7 +58,7 @@ export default function Header() {
           {/* Desktop links */}
           <ul className="hidden min-[651px]:flex gap-8 text-sm">
             {links.map((l) => (
-              <li key={l.href}>
+              <li key={l.href} className="relative group">
                 <Link
                   href={l.href}
                   onClick={(e) => handleScrollToSection(e, l.href)}
@@ -50,6 +66,14 @@ export default function Header() {
                 >
                   {l.label}
                 </Link>
+
+                {/* Tooltip */}
+                <div className="absolute left-1/2 -translate-x-1/2 top-full mt-3 w-56 bg-black-900 border border-gray-700 text-white rounded-xl shadow-lg p-3 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out pointer-events-none">
+                  <h4 className="font-semibold text-sm mb-1">{l.label}</h4>
+                  <p className="text-xs text-gray-400 leading-snug">
+                    {l.description}
+                  </p>
+                </div>
               </li>
             ))}
           </ul>
@@ -73,7 +97,7 @@ export default function Header() {
               </svg>
             </button>
             {menuOpen && (
-              <ul className="absolute right-0 mt-2 w-40 bg-black border border-gray-700 rounded shadow-lg z-50">
+              <ul className="absolute right-0 mt-2 w-64 bg-gray-900 border border-gray-700 rounded-lg shadow-lg z-50">
                 {links.map((l) => (
                   <li key={l.href}>
                     <Link
@@ -82,9 +106,10 @@ export default function Header() {
                         handleScrollToSection(e, l.href);
                         setMenuOpen(false);
                       }}
-                      className="block px-4 py-2 text-white hover:text-blue-500 hover:bg-gray-800 transition-colors"
+                      className="block px-4 py-3 hover:bg-gray-800 transition-colors"
                     >
-                      {l.label}
+                      <h4 className="text-white font-semibold">{l.label}</h4>
+                      <p className="text-xs text-gray-400">{l.description}</p>
                     </Link>
                   </li>
                 ))}

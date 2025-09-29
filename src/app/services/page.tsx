@@ -4,6 +4,14 @@ import ServicesSection from "@/components/ServicesSection";
 import FAQSection from "@/components/FAQSection";
 // import CTABanner from "@/components/CTABanner";
 import PageTransition from "@/components/animation/PageTransition";
+import {
+  CommunicationIcon,
+  FastIcon,
+  GoalIcon,
+  PostSupport,
+  QualityIcon,
+  ToolIcon,
+} from "@/components/utils/svgs";
 
 export default function ServicesPage() {
   return (
@@ -55,7 +63,7 @@ export default function ServicesPage() {
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
                 <div className="bg-gray-950 border border-gray-800 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
-                    <span className="text-white text-xl">⚡</span>
+                    <FastIcon />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">
                     Fast Delivery
@@ -68,7 +76,7 @@ export default function ServicesPage() {
 
                 <div className="bg-gray-950 border border-gray-800 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
-                    <span className="text-white text-xl">🎯</span>
+                    <GoalIcon />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">
                     Results-Driven
@@ -81,7 +89,7 @@ export default function ServicesPage() {
 
                 <div className="bg-gray-950 border border-gray-800 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
-                    <span className="text-white text-xl">🔧</span>
+                    <ToolIcon />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">
                     Modern Tech Stack
@@ -94,7 +102,7 @@ export default function ServicesPage() {
 
                 <div className="bg-gray-950 border border-gray-800 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
-                    <span className="text-white text-xl">💬</span>
+                    <CommunicationIcon />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">
                     Clear Communication
@@ -107,7 +115,7 @@ export default function ServicesPage() {
 
                 <div className="bg-gray-950 border border-gray-800 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
-                    <span className="text-white text-xl">🛡️</span>
+                    <QualityIcon />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">
                     Quality Assurance
@@ -120,7 +128,7 @@ export default function ServicesPage() {
 
                 <div className="bg-gray-950 border border-gray-800 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
-                    <span className="text-white text-xl">🚀</span>
+                    <PostSupport />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">
                     Post-Launch Support

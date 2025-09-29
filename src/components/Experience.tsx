@@ -1,6 +1,6 @@
 import Container from "@/components/Container";
 import SectionHeading from "@/components/SectionHeading";
-import "@/app/styles/timeline.css";
+// import "@/app/styles/timeline.css";
 import { experiences } from "@/data/experience";
 
 // const experiences = [
@@ -40,16 +40,27 @@ export default function Experience() {
                 <div className="timeline-content">
                   <h3>
                     {exp.link ? (
-                      <a href={exp.link} target="_blank" rel="noopener noreferrer" className="font-medium text-xl text-cyan-400 hover:text-cyan-300 transition-colors">
+                      <a
+                        href={exp.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-medium text-xl text-cyan-400 hover:text-cyan-300 transition-colors"
+                      >
                         {exp.company}
                       </a>
                     ) : (
-                      <span className="font-medium text-xl text-cyan-400">{exp.company}</span>
+                      <span className="font-medium text-xl text-cyan-400">
+                        {exp.company}
+                      </span>
                     )}
                   </h3>
                   <h4 className="text-white font-bold text-lg">{exp.role}</h4>
-                  <div className="date text-gray-400 text-sm mt-2 font-medium">{exp.period}</div>
-                  <div className="description text-gray-300 mt-3 leading-relaxed">{exp.summary}</div>
+                  <div className="date text-gray-400 text-sm mt-2 font-medium">
+                    {exp.period}
+                  </div>
+                  <div className="description text-gray-300 mt-3 leading-relaxed">
+                    {exp.summary}
+                  </div>
                 </div>
               </div>
             ))}

@@ -101,7 +101,6 @@ export const certifications: Certification[] = [
     updatedAt: "2025-08-15T16:59:32.263Z",
   },
   {
-    
     _id: "689c75aa95e713fcd6b32e92",
     name: "Understanding TypeScript",
     issuer: "Udemy",
@@ -116,7 +115,6 @@ export const certifications: Certification[] = [
       "https://udemy-certificate.s3.amazonaws.com/image/UC-f3514347-8fc8-45b9-ad7a-f6485575e045.jpg",
   },
   {
-    
     _id: "689c75bf95e713fcd6b32e93",
     name: "Complete Web Design: From Figma to Webflow to Freelancing",
     issuer: "Udemy",
@@ -144,7 +142,6 @@ export const certifications: Certification[] = [
       "https://www.udemy.com/certificate/UC-7e24a7b2-ff04-4b63-8dcf-ef2930a1a5de/",
   },
   {
-    
     _id: "689c75d195e713fcd6b32e94",
     name: "Flutter & Dart - The Complete Guide",
     issuer: "Udemy",
@@ -166,7 +163,6 @@ export const certifications: Certification[] = [
       "https://udemy-certificate.s3.amazonaws.com/image/UC-af342ff6-fa57-4419-b563-69acba3289d4.jpg",
   },
   {
-    
     _id: "689c75e295e713fcd6b32e95",
     name: "Flutter Advanced Course - Clean Architecture with MVVM",
     issuer: "Udemy",
@@ -181,7 +177,6 @@ export const certifications: Certification[] = [
       "https://udemy-certificate.s3.amazonaws.com/image/UC-8d037eca-dd14-472f-900e-9d39eb78a906.jpg",
   },
   {
-   
     _id: "689c75f095e713fcd6b32e96",
     name: "Go :The complete Developers Guide to Golang",
     issuer: "Udemy",
@@ -203,7 +198,6 @@ export const certifications: Certification[] = [
       "https://udemy-certificate.s3.amazonaws.com/image/UC-cb2eb5c7-1538-4296-aebc-b8ff421da70f.jpg",
   },
   {
- 
     _id: "689c75ff95e713fcd6b32e97",
     name: "Ultimate Rust Crash Course",
     issuer: "Udemy",
@@ -217,7 +211,6 @@ export const certifications: Certification[] = [
       "https://www.udemy.com/certificate/UC-f4aa3d0f-46a1-4a13-bdc0-bb1a9ec65e7b/",
   },
   {
-    
     _id: "689c760f95e713fcd6b32e98",
     name: "Microsoft Azure Fundamentals",
     issuer: "Microsoft",
@@ -230,7 +223,6 @@ export const certifications: Certification[] = [
       "https://learn.microsoft.com/api/credentials/share/en-us/OmJamnekar/CE7F8138C2F3E8C9",
   },
   {
-  
     _id: "689c761d95e713fcd6b32e99",
     name: "Introduction to Programming Using HTML and CSS",
     issuer: "Udemy",
@@ -368,7 +360,7 @@ export const projects: Project[] = [
 export const workExperience = [
   {
     company: "WhatBytes",
-    role: "Flutter developer",
+    role: "Flutter developer Intern",
     period: "June 2025 to Current",
     location: "Toronto, Canada (Remote)",
     description:
