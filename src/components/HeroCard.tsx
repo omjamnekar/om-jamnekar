@@ -2,15 +2,7 @@
 import React, { useState } from "react";
 import Container from "@/components/Container";
 import { site } from "@/data/site";
-import {
-  Mail,
-  Github,
-  Instagram,
-  MapPin,
-  MoreVertical,
-  Linkedin,
-  X,
-} from "lucide-react";
+import { Mail, Github, MapPin, MoreVertical, Linkedin } from "lucide-react";
 
 export default function HeroCard() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
