@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "Work",
   description:
     "A curated selection of industry and freelance work including apps, websites, tools, and systems built with modern technologies.",
+  icons: {
+    icon: "/logo.svg",
+  },
 };
 
 type WorkItem = {
@@ -376,9 +379,9 @@ function WorkCard({ item }: { item: WorkItem }) {
 export default function WorkPage() {
   return (
     <div className="min-h-screen bg-black text-white">
-      <main className="pt-16 pb-20">
+      <main className="pt-2 pb-13">
         {/* Hero */}
-        <section className="py-12">
+        <section className="py-8">
           <Container>
             <div className="text-center max-w-3xl mx-auto">
               <h1 className="text-4xl md:text-5xl font-bold mb-4">Work</h1>
@@ -403,17 +406,7 @@ export default function WorkPage() {
           </Container>
         </section>
 
-        {/* Freelance Work */}
-        <section className="py-8">
-          <Container>
-            <SectionHeading>Freelance Work</SectionHeading>
-            <div className="grid md:grid-cols-2 gap-6 mt-8">
-              {freelanceItems.map((item) => (
-                <WorkCard key={item.title} item={item} />
-              ))}
-            </div>
-          </Container>
-        </section>
+      
       </main>
     </div>
   );

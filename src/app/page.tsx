@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Container from "@/components/Container";
-import { projects, type Project } from "@/data/projects";
+import { workProject, type WorkProject } from "@/data/workproject";
 import Experience from "@/components/Experience";
 import SectionHeading from "@/components/SectionHeading";
 import HeroCard from "@/components/HeroCard";
@@ -8,6 +8,7 @@ import WorkCard from "@/components/WorkCard";
 
 import TechStack from "@/components/TechStack";
 import PageTransition from "@/core/animation/PageTransition";
+import { projects } from "@/data/personal_projects";
 // import Testimonials from "@/components/Testimonials";
 // import LatestBlogPosts from "@/components/LatestBlogPosts";
 // import CTABanner from "@/components/CTABanner";
@@ -28,7 +29,7 @@ export default function Home() {
             <Container>
               <SectionHeading>My work</SectionHeading>
               <div className="mt-8 space-y-6">
-                {projects.slice(0, 4).map((p: Project) => (
+                {workProject.slice(0, 4).map((p: WorkProject) => (
                   <WorkCard
                     key={p.slug}
                     href={`/projects/${p.slug}`}
@@ -41,7 +42,7 @@ export default function Home() {
               </div>
               <div className="mt-8">
                 <Link
-                  href="/projects"
+                  href="/work"
                   className="inline-flex items-center text-sm text-cyan-400 hover:text-cyan-300 transition-colors"
                 >
                   View all projects →
@@ -54,7 +55,7 @@ export default function Home() {
             <Container>
               <SectionHeading>My personal projects</SectionHeading>
               <div className="mt-8 grid gap-6 sm:grid-cols-2">
-                {projects.slice(4, 6).map((p: Project) => (
+                {projects.slice(0,4).map((p: WorkProject) => (
                   <WorkCard
                     key={p.slug}
                     href={`/projects/${p.slug}`}

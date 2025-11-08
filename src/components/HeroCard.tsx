@@ -14,7 +14,7 @@ export default function HeroCard() {
           <div className="flex items-start justify-between">
             <div className="flex-1">
               <h1 className="text-3xl font-bold mb-2 text-white">
-                {site.name}
+         <span className="text-cyan-400">{site.name.charAt(0)}</span>{site.name.slice(1)}
               </h1>
               <a
                 href="https://www.google.com/maps?q=Mumbai"
@@ -26,8 +26,8 @@ export default function HeroCard() {
                 <MapPin className="w-4 h-4 text-white" /> Mumbai, India
               </a>
               <p className="text-gray-300 leading-relaxed max-w-2xl">
-                I&apos;m a 21-year-old {site.title}. I have been programming for
-                more than 3 years. I create professional Apps.
+                I&apos;m a 21 year old {site.title}. I have been programming for
+                more than 3 years. I create professional Software.
               </p>
             </div>
 

@@ -1,10 +1,13 @@
 import Container from "@/components/Container";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { projects } from "@/data/projects";
+import { projects } from "@/data/personal_projects";
 
 export const metadata: Metadata = {
   title: "Projects",
+  icons: {
+    icon: "/logo.svg",
+  },
 };
 
 export default function ProjectsPage() {

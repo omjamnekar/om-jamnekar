@@ -3,7 +3,7 @@
 import Container from "@/components/Container";
 import SectionHeading from "@/components/SectionHeading";
 import { Icon } from "@iconify/react";
-import { technologies2, technologies1 } from "@/data/work"; 
+import { technologies2, technologies1 } from "@/data/technologies"; 
 
 
 

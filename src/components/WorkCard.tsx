@@ -75,7 +75,7 @@ export default function WorkCard({
               ))}
             </div>
             
-            <p className="text-gray-200 text-sm leading-relaxed transition-colors duration-300 mb-0">
+            <p className="text-gray-200 text-sm leading-relaxed transition-colors duration-300 mb-0 line-clamp-3">
               {summary}
             </p>
           </div>

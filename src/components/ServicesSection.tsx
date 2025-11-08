@@ -142,18 +142,15 @@ export default function ServicesSection() {
         {/* Process */}
         <div className="mb-20">
           <SectionHeading>How I Work</SectionHeading>
-          <p className="text-gray-300 text-center mt-4 mb-12 max-w-2xl mx-auto">
-            A proven process that ensures your project is delivered on time,
-            within budget, and exceeds expectations.
-          </p>
+          <div className="mb-5"></div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {process.map((item, index) => (
               <div key={item.step} className="relative group">
                 <div className="bg-gray-950 border border-gray-800 rounded-xl p-6 text-center hover:border-cyan-500/50 transition-all duration-300">
-                  <div className="inline-flex w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  {/* <div className="inline-flex w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     <item.icon className="w-8 h-8 text-white" />
-                  </div>
+                  </div> */}
 
                   <div className="text-2xl font-bold text-cyan-400 mb-2">
                     {item.step}
@@ -169,8 +166,8 @@ export default function ServicesSection() {
                 </div>
 
                 {/* Connection line */}
-                {index < process.length - 1 && (
-                  <div className="hidden lg:block absolute top-1/2 -right-3 w-6 h-px bg-gradient-to-r from-cyan-500 to-transparent" />
+                {  (index < process.length && index > 0)   && (
+                  <div className="hidden lg:block absolute top-1/2 -left-8 w-9 h-px bg-gradient-to-r to-cyan-500 from-transparent" />
                 )}
               </div>
             ))}
@@ -179,10 +176,10 @@ export default function ServicesSection() {
 
         {/* Features */}
         <div>
-          <h3 className="text-2xl font-bold text-white text-center mb-8">
+          <SectionHeading>
             Why Choose Me?
-          </h3>
-
+          </SectionHeading>
+          <div className="mb-5"></div>
           <div className="grid md:grid-cols-3 gap-6">
             {features.map((feature) => (
               <div key={feature.title} className="text-center group">

@@ -22,15 +22,6 @@ export type Certification = {
   updatedAt?: string;
 };
 
-export type Project = {
-  name: string;
-  description: string;
-  technologies: string[];
-  link?: string;
-  github?: string;
-  type: "mobile" | "web" | "desktop" | "other";
-};
-
 export type SkillCategory = {
   category: string;
   skills: string[];
@@ -52,7 +43,7 @@ export type PersonalInfo = {
 export const personalInfo: PersonalInfo = {
   name: "Om Jamnekar",
   title: "Flutter Developer",
-  bio: "I am not more socialize and cant do anything more then coding. no hobbies but mostly spend my day doing coding. I mostly love doing work contribute to a team where I can apply my problem-solving skills, learn new things, and communicate effectively",
+  bio: "I am not more socialize and cant do anything more then coding. no hobbies but mostly spend my day doing coding. I mostly love doing work contribute to a team where I can apply my problem-solving skills, learn new things and communicate effectively.",
   email: "omjjamnekar@gmail.com",
   phone: "91+7738314857",
   location: "Mumbai, Maharashtra, India",
@@ -66,19 +57,19 @@ export const education: Education[] = [
     institution: "M. L. Dhahanukar College",
     degree: "BSc IT",
     gpa: "8.5 GPA",
-    period: "2021 - 2024",
+    period: "2022 - 2025",
   },
   {
     institution: "M. L. Dhahanukar College",
     degree: "Commerce",
     gpa: "84.30%",
-    period: "2019 - 2021",
+    period: "2020 - 2022",
   },
   {
     institution: "Vidya mandir school",
     degree: "High School",
     gpa: "84.40%",
-    period: "2018 - 2019",
+    period: "2010 - 2020",
   },
 ];
 
@@ -301,92 +292,6 @@ export const skillCategories: SkillCategory[] = [
       "SQL",
       "MicrosoftSQL server",
       "PostgreSQL",
-    ],
-  },
-];
-
-// Projects from resume
-export const projects: Project[] = [
-  {
-    name: "Nutrito",
-    description:
-      "Food Product Analysis app using machine learning to evaluate food ingredients and compare with other products, providing alternative recommendations.",
-    technologies: ["Machine Learning", "Mobile Development", "API Integration"],
-    type: "mobile",
-    github: "https://github.com/omjamnekar/nutrito", // You can update this
-  },
-  {
-    name: "MealBook",
-    description:
-      "Pre-order app for food ordering before reaching the canteen. Features real-time updates on meals, payment gateway integration, and time-tracking functionality.",
-    technologies: [
-      "Flutter",
-      "Payment Gateway",
-      "Real-time Updates",
-      "Time Tracking",
-    ],
-    type: "mobile",
-    github: "https://github.com/omjamnekar/mealbook", // You can update this
-  },
-  {
-    name: "Muvi",
-    description:
-      "Movies updates and trailers viewing app providing information about actors, movies and their trailers similar to IMDB functionality.",
-    technologies: ["Flutter", "API Integration", "Media Streaming"],
-    type: "mobile",
-  },
-  {
-    name: "Go",
-    description:
-      "Time and place capture app that can capture images of moments and store them in memory with location data for easy access and retrieval.",
-    technologies: [
-      "Flutter",
-      "Location Services",
-      "Image Processing",
-      "Local Storage",
-    ],
-    type: "mobile",
-  },
-  {
-    name: "Virtual Note",
-    description:
-      "Cloud-based note-taking application for keeping all notes in the cloud with access from anywhere. Features synchronization across devices.",
-    technologies: ["Cloud Storage", "Cross-platform", "Synchronization"],
-    type: "web",
-  },
-];
-
-// Work Experience (from existing data but enhanced)
-export const workExperience = [
-  {
-    company: "WhatBytes",
-    role: "Flutter developer Intern",
-    period: "June 2025 to Sep 2025",
-    location: "Toronto, Canada (Remote)",
-    description:
-      "Built high-performance Flutter apps using clean architecture and responsive UI, WebSocket integration. Integrated with APIs and real-time data with sockets like Bloc and MethodChannel, like Riverpod and more often packages to build. Took part in code reviews, sprint meetings, and feature planning. Used Git, Figma, Slack, Postman for development and collaboration. Learned from mentors to improve code quality and app deployment. Contributed to each world, user-focused projects.",
-    achievements: [
-      "Built high-performance Flutter apps using clean architecture and responsive UI",
-      "Integrated with APIs and real-time data with WebSocket",
-      "Used modern state management solutions like Bloc and MethodChannel",
-      "Implemented custom widgets, animations, and advanced routing/navigation patterns",
-      "Participated in code reviews, sprint meetings, and feature planning",
-      "Collaborated using Git, Figma, Slack, and Postman",
-    ],
-  },
-
-  {
-    company: "Freelancer",
-    role: "Fullstack Flutter Developer",
-    period: "Jan 2023 to May 2025",
-    location: "Remote",
-    description:
-      "Worked with multiple clients to deliver custom mobile and web applications using Flutter. Responsible for full project lifecycle including requirements gathering, UI/UX design, development, testing, deployment, and maintenance.",
-    achievements: [
-      "Delivered 5+ cross-platform apps for clients in e-commerce, education, and healthcare domains",
-      "Implemented RESTful API integrations, push notifications, and payment gateways",
-      "Provided ongoing support and feature enhancements based on client feedback",
-      "Managed project timelines and communicated directly with clients to ensure satisfaction",
     ],
   },
 ];

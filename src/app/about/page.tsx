@@ -6,10 +6,12 @@ import {
   education,
   certifications,
   skillCategories,
-  projects as aboutProjects,
-  workExperience,
   additionalSections,
 } from "@/data/about";
+
+import { experiences } from "@/data/experience";
+
+import { projects } from "@/data/personal_projects";
 import { site } from "@/data/site";
 import Link from "next/link";
 // import "@/app/styles/timeline.css";
@@ -18,6 +20,9 @@ import PageTransition from "@/core/animation/PageTransition";
 export const metadata: Metadata = {
   title: "About",
   description: `Learn more about ${personalInfo.name}, ${personalInfo.title} based in ${personalInfo.location}. Discover my background, skills, experience, and passion for development.`,
+  icons: {
+    icon: "/logo.svg",
+  },
 };
 
 export default function AboutPage() {
@@ -122,7 +127,7 @@ export default function AboutPage() {
               <SectionHeading>Work Experience</SectionHeading>
               <div className="mt-8">
                 <div className="timeline-container">
-                  {workExperience.map((exp, index) => (
+                  {experiences.map((exp, index) => (
                     <div key={index} className="timeline-item">
                       <div className="timeline-dot" />
                       <div className="timeline-content">
@@ -224,24 +229,24 @@ export default function AboutPage() {
             <Container>
               <SectionHeading>Featured Projects</SectionHeading>
               <div className="mt-8 grid gap-6 md:grid-cols-2">
-                {aboutProjects.slice(0, 4).map((project, index) => (
+                {projects.slice(0, 4).map((project, index) => (
                   <div
                     key={index}
                     className="bg-gray-900 border border-gray-800 rounded-lg p-6 hover:border-cyan-400 transition-colors"
                   >
                     <div className="flex items-start justify-between mb-3">
                       <h3 className="text-lg font-semibold text-white">
-                        {project.name}
+                        {project.title}
                       </h3>
                       <span className="px-2 py-1 text-xs bg-cyan-400/10 text-cyan-400 rounded">
                         {project.type}
                       </span>
                     </div>
                     <p className="text-gray-300 text-sm mb-4 leading-relaxed">
-                      {project.description}
+                      {project.summary}
                     </p>
                     <div className="flex flex-wrap gap-2 mb-4">
-                      {project.technologies.map((tech, techIndex) => (
+                      {project.tags.map((tech, techIndex) => (
                         <span
                           key={techIndex}
                           className="px-2 py-1 text-xs bg-gray-800 text-gray-400 rounded"

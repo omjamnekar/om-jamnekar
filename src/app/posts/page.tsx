@@ -6,6 +6,9 @@ import PageTransition from "@/core/animation/PageTransition";
 
 export const metadata: Metadata = {
   title: "Posts",
+  icons: {
+    icon: "/logo.svg",
+  },
 };
 
 export default function PostsPage() {

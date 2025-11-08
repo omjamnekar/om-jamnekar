@@ -16,11 +16,11 @@ const links = [
     label: "Services",
     description: "Explore the professional solutions I provide.",
   },
-  {
-    href: "/posts",
-    label: "Blog",
-    description: "Read insights, tutorials, and industry updates.",
-  },
+  // {
+  //   href: "/posts",
+  //   label: "Blog",
+  //   description: "Read insights, tutorials, and industry updates.",
+  // },
   {
     href: "/contact",
     label: "Contact",

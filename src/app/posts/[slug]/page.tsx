@@ -11,7 +11,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const post = posts.find((p) => p.slug === slug);
   if (!post) return { title: "Post not found" };
-  return { title: post.title, description: post.excerpt };
+  return { 
+    title: post.title, 
+    description: post.excerpt,
+    icons: {
+      icon: "/logo.svg",
+    },
+  };
 }
 
 export default async function PostPage({ params }: { params: Promise<{ slug: string }> }) {

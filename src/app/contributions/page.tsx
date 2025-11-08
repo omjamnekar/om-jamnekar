@@ -1,7 +1,12 @@
 import Container from "@/components/Container";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = { title: "Contributions" };
+export const metadata: Metadata = { 
+  title: "Contributions",
+  icons: {
+    icon: "/logo.svg",
+  },
+};
 
 export default function ContributionsPage() {
   return (
