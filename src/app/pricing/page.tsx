@@ -3,6 +3,9 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Pricing",
+  icons: {
+    icon: "/logo.svg",
+  },
 };
 
 export default function PricingPage() {
