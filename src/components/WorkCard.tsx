@@ -12,7 +12,7 @@ export interface WorkCardProps {
 }
 
 // Generate a consistent placeholder image
-const getPlaceholderImage = (title: string) => {
+const getPlaceholderImage = () => {
   return `https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=600&fit=crop&q=80&auto=format`;
 };
 
@@ -24,7 +24,7 @@ export default function WorkCard({
   image 
 }: WorkCardProps) {
   const [isHovered, setIsHovered] = useState(false);
-  const displayImage = image || getPlaceholderImage(title);
+  const displayImage = image || getPlaceholderImage();
 
   return (
     <Link 
@@ -37,6 +37,7 @@ export default function WorkCard({
         {/* Image Container - Takes full card */}
         <div className="relative aspect-[16/11] rounded-xl overflow-hidden bg-gray-950">
           {/* Background Image */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img 
             src={displayImage}
             alt={title}

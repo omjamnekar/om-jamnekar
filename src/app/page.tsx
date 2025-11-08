@@ -8,7 +8,6 @@ import WorkCard from "@/components/WorkCard";
 
 import TechStack from "@/components/TechStack";
 import PageTransition from "@/core/animation/PageTransition";
-import { projects } from "@/data/personal_projects";
 import OpenSource from "@/components/OpenSource";
 import ProjectSection from "@/components/Projects";
 // import Testimonials from "@/components/Testimonials";

@@ -1,4 +1,3 @@
-import Container from "@/components/Container";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { projects } from "@/data/personal_projects";

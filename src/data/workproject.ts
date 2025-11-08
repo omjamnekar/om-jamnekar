@@ -1,17 +1,3 @@
-type WorkItem = {
-  impact: {
-    metrics: string;
-    businessValue: string;
-  };
-  links: {
-    liveDemo?: string;
-    githubRepo?: string;
-    appStore?: string;
-    playStore?: string;
-    caseStudy?: string;
-  };
-  screenshots: { url: string; caption: string }[];
-};
 export type WorkProject = {
   slug: string;
   role: string;

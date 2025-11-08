@@ -35,7 +35,7 @@ export default function ProjectSection() {
               <div>
                 <SectionHeading>Project</SectionHeading>
                 <p className="text-gray-400 text-sm mt-2 max-w-2xl">
-                  A selection of projects I've worked on, ranging from full-stack applications
+                  A selection of projects I&apos;ve worked on, ranging from full-stack applications
                   to design systems and developer tools.
                 </p>
               </div>

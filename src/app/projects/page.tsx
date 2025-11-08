@@ -2,7 +2,7 @@ import Container from "@/components/Container";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { projects } from "@/data/personal_projects";
-import { ArrowRight, Github, ExternalLink } from "lucide-react";
+import { ArrowRight, Github } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Projects",
@@ -26,7 +26,7 @@ export default function ProjectsPage() {
               My Projects
             </h1>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              A collection of innovative solutions I've built, from AI-powered applications to creative mobile experiences.
+              A collection of innovative solutions I&apos;ve built, from AI-powered applications to creative mobile experiences.
             </p>
           </div>
 
@@ -42,6 +42,7 @@ export default function ProjectsPage() {
                 {/* Image Section */}
                 <div className={`relative flex-1 ${index % 2 === 0 ? 'md:order-1' : 'md:order-2'}`}>
                   <div className="relative aspect-[16/10] rounded-2xl overflow-hidden bg-gray-900">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={project.image}
                       alt={project.title}
