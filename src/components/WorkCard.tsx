@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
 
 export interface WorkCardProps {
   href: string;
@@ -10,6 +11,11 @@ export interface WorkCardProps {
   image?: string;
 }
 
+// Generate a consistent placeholder image
+const getPlaceholderImage = (title: string) => {
+  return `https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=600&fit=crop&q=80&auto=format`;
+};
+
 export default function WorkCard({ 
   href, 
   title, 
@@ -17,89 +23,91 @@ export default function WorkCard({
   tags, 
   image 
 }: WorkCardProps) {
+  const [isHovered, setIsHovered] = useState(false);
+  const displayImage = image || getPlaceholderImage(title);
 
   return (
-    <div className="group cursor-pointer">
-      <div className="relative rounded-xl overflow-hidden border border-gray-700 bg-gray-900 hover:border-gray-600 transition-all duration-500 min-h-[400px]">
-        {/* Background Image with Zoom Effect */}
-        <div 
-          className="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-110"
-          style={{
-            backgroundImage: image ? `url(${image})` : 'none',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-          }}
-        />
-        
-        {/* Fallback background if no image */}
-        {!image && (
-          <div className="absolute inset-0 bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
-            <div className="text-gray-600 text-8xl opacity-20">🖼️</div>
-          </div>
-        )}
-
-        {/* Dark overlay with gradient from bottom to top - maintain shade on hover */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent transition-all duration-500"></div>
-        
-        {/* Content at absolute bottom - no space below */}
-        <div className="absolute bottom-0 left-0 right-0 pt-6 px-6 pb-0 z-10">
-          {/* Main Content - lifts up slightly on hover */}
-          <div className="transform transition-transform duration-500 ease-out group-hover:-translate-y-8">
-            <h3 className="font-semibold text-xl text-white mb-2 transition-colors duration-300">
-              {title}
-            </h3>
-            
-            <div className="flex flex-wrap gap-2 mb-2">
-              {tags.map((tag) => (
+    <Link 
+      href={href}
+      className="group block no-underline hover:no-underline"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <div className="relative h-full">
+        {/* Image Container - Takes full card */}
+        <div className="relative aspect-[16/11] rounded-xl overflow-hidden bg-gray-950">
+          {/* Background Image */}
+          <img 
+            src={displayImage}
+            alt={title}
+            className={`absolute inset-0 w-full h-full object-cover transition-all duration-700
+                      ${isHovered ? 'scale-110' : 'scale-100'}`}
+          />
+          
+          {/* Dark Overlay - stronger at bottom */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/30" />
+          
+          {/* Content Overlay */}
+          <div className="absolute inset-0 p-6 flex flex-col justify-end">
+            {/* Tags at top - only visible on hover */}
+            <div className={`absolute top-6 left-6 right-6 flex flex-wrap gap-2 transition-all duration-500
+                          ${isHovered ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
+              {tags.slice(0, 3).map((tag) => (
                 <span
                   key={tag}
-                  className="inline-flex items-center gap-1.5 px-2.5 py-1.5 text-xs bg-black text-white rounded border border-gray-700 transition-all duration-300"
+                  className="px-3 py-1 text-xs font-medium rounded-full
+                           bg-white/10 backdrop-blur-sm text-white border border-white/20"
                 >
-                  {/* Tech Stack Icons - Simple white symbols */}
-                  {tag === 'Next.js' && <span className="text-white text-[10px]">▲</span>}
-                  {tag === 'React' && <span className="text-white text-[10px]">⚛</span>}
-                  {tag === 'TypeScript' && <span className="text-white text-[10px]">TS</span>}
-                  {tag === 'Tailwind' && <span className="text-white text-[10px]">◉</span>}
-                  {tag === 'Charts' && <span className="text-white text-[10px]">📊</span>}
-                  {tag === 'API' && <span className="text-white text-[10px]">🔗</span>}
-                  {tag === 'UI' && <span className="text-white text-[10px]">UI</span>}
-                  {tag === 'Storybook' && <span className="text-white text-[10px]">SB</span>}
-                  {tag === 'Design' && <span className="text-white text-[10px]">✎</span>}
-                  {tag === 'AI' && <span className="text-white text-[10px]">AI</span>}
-                  {tag === 'LLM' && <span className="text-white text-[10px]">LLM</span>}
-                  {tag === 'Automation' && <span className="text-white text-[10px]">⚙</span>}
-                  {!['Next.js', 'React', 'TypeScript', 'Tailwind', 'Charts', 'API', 'UI', 'Storybook', 'Design', 'AI', 'LLM', 'Automation'].includes(tag) && <span className="text-white text-[10px]">●</span>}
                   {tag}
                 </span>
               ))}
             </div>
-            
-            <p className="text-gray-200 text-sm leading-relaxed transition-colors duration-300 mb-0 line-clamp-3">
-              {summary}
-            </p>
+
+            {/* Title and Description */}
+            <div className="space-y-3">
+              <h3 className={`text-2xl font-bold text-white transition-all duration-300
+                            ${isHovered ? 'transform -translate-y-2' : ''}`}>
+                {title}
+              </h3>
+              
+                <p className={`text-gray-300 text-sm leading-relaxed transition-all duration-500 line-clamp-3
+                       ${isHovered 
+                       ? 'opacity-100 translate-y-0 max-h-20' 
+                       : 'opacity-0 translate-y-4 max-h-0'
+                       } overflow-hidden`}>
+                {summary}
+                </p>
+
+              {/* View Project Button */}
+              <div className={`flex items-center gap-2 text-cyan-400 font-medium text-sm
+                            transition-all duration-500
+                            ${isHovered ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+                <span>View Project</span>
+                <svg 
+                  className="w-4 h-4 transition-transform group-hover:translate-x-1" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round" 
+                    strokeWidth={2} 
+                    d="M17 8l4 4m0 0l-4 4m4-4H3" 
+                  />
+                </svg>
+              </div>
+            </div>
           </div>
 
-          {/* Learn More Button - with bottom spacing */}
-          <div className="mb-3 transform translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
-            <Link 
-              href={href}
-              className="inline-flex items-center gap-2 px-4 py-2 bg-black hover:bg-gray-900 text-white hover:text-gray-100 text-sm font-medium rounded border border-gray-600 hover:border-gray-500 transition-all duration-300 hover:no-underline"
-              style={{ textDecoration: 'none' }}
-            >
-              Learn more
-              <svg 
-                className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5" 
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
-          </div>
+          {/* Glowing Border on Hover */}
+          <div className={`absolute inset-0 rounded-xl border-2 transition-all duration-500
+                        ${isHovered 
+                          ? 'border-cyan-400/50 shadow-[0_0_30px_rgba(34,211,238,0.3)]' 
+                          : 'border-transparent'
+                        }`} />
         </div>
       </div>
-    </div>
+    </Link>
   );
 }

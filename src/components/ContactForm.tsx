@@ -35,7 +35,7 @@ export default function ContactForm() {
       <input name="name" required placeholder="Your name" className="px-3 py-2 rounded border border-black/10 dark:border-white/20 bg-transparent" />
       <input name="email" type="email" required placeholder="Your email" className="px-3 py-2 rounded border border-black/10 dark:border-white/20 bg-transparent" />
       <textarea name="message" required placeholder="Your message" rows={6} className="px-3 py-2 rounded border border-black/10 dark:border-white/20 bg-transparent" />
-      <button disabled={loading} className="px-4 py-2 rounded-md bg-foreground text-background text-sm w-fit disabled:opacity-60">
+      <button disabled={loading} className="px-4 py-2 w-auto max-w-xs rounded-md bg-foreground text-background text-sm   disabled:opacity-60">
         {loading ? "Sending..." : "Send"}
       </button>
       {status && <p className="text-sm text-black/70 dark:text-white/70">{status}</p>}
