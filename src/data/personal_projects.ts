@@ -28,7 +28,8 @@ export const projects: Project[] = [
     type: "mobile",
     github: "https://github.com/omjamnekar/nutrito", // You can update this
     slug: "nutrito",
-    image: "",
+    image:
+      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=600&fit=crop&q=80&auto=format",
   },
 
   {
@@ -47,7 +48,8 @@ export const projects: Project[] = [
     ],
     type: "web",
     slug: "mentoring-ai",
-    image: "",
+    image:
+      "https://images.pexels.com/photos/1250452/pexels-photo-1250452.jpeg?_gl=1*1o8vbz7*_ga*MjEzNTU0NTg3NC4xNzYyNjA2OTgy*_ga_8JE65Q40S6*czE3NjI2MDY5ODIkbzEkZzEkdDE3NjI2MDcwMjYkajE2JGwwJGgw",
   },
   {
     title: "Cognitive",
@@ -67,7 +69,8 @@ export const projects: Project[] = [
     ],
     type: "desktop",
     slug: "assistant-ai",
-    image: "",
+    image:
+      "https://images.pexels.com/photos/6538616/pexels-photo-6538616.jpeg?_gl=1*sh05ed*_ga*MjEzNTU0NTg3NC4xNzYyNjA2OTgy*_ga_8JE65Q40S6*czE3NjI2MDY5ODIkbzEkZzEkdDE3NjI2MDcxMDckajQxJGwwJGgw",
   },
   {
     title: "MealBook",
@@ -83,7 +86,8 @@ export const projects: Project[] = [
     type: "mobile",
     github: "https://github.com/omjamnekar/mealbook", // You can update this
     slug: "mealbook",
-    image: "",
+    image:
+      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&h=600&fit=crop&q=80&auto=format",
   },
   {
     title: "Muvi",
@@ -92,7 +96,8 @@ export const projects: Project[] = [
     tags: ["Flutter", "API Integration", "Media Streaming"],
     type: "mobile",
     slug: "muvi",
-    image: "",
+    image:
+      "https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=800&h=600&fit=crop&q=80&auto=format",
   },
   {
     title: "Go location",
@@ -101,7 +106,8 @@ export const projects: Project[] = [
     tags: ["Flutter", "Location Services", "Image Processing", "Local Storage"],
     type: "mobile",
     slug: "go",
-    image: "",
+    image:
+      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=600&fit=crop&q=80&auto=format",
   },
   {
     title: "Virtual Note",
@@ -110,6 +116,7 @@ export const projects: Project[] = [
     tags: ["Cloud Storage", "Cross-platform", "Synchronization"],
     type: "web",
     slug: "virtual-note",
-    image: "",
+    image:
+      "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=800&h=600&fit=crop&q=80&auto=format",
   },
 ];

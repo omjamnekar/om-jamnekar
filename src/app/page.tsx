@@ -8,7 +8,8 @@ import WorkCard from "@/components/WorkCard";
 
 import TechStack from "@/components/TechStack";
 import PageTransition from "@/core/animation/PageTransition";
-import { projects } from "@/data/personal_projects";
+import OpenSource from "@/components/OpenSource";
+import ProjectSection from "@/components/Projects";
 // import Testimonials from "@/components/Testimonials";
 // import LatestBlogPosts from "@/components/LatestBlogPosts";
 // import CTABanner from "@/components/CTABanner";
@@ -27,12 +28,12 @@ export default function Home() {
           {/* My Work Section */}
           <section id="work" className="py-12">
             <Container>
-              <SectionHeading>My work</SectionHeading>
+              <SectionHeading>Work</SectionHeading>
               <div className="mt-8 space-y-6">
                 {workProject.slice(0, 4).map((p: WorkProject) => (
                   <WorkCard
                     key={p.slug}
-                    href={`/projects/${p.slug}`}
+                    href={`/work/${p.slug}`}
                     title={p.title}
                     summary={p.summary}
                     tags={p.tags}
@@ -45,13 +46,15 @@ export default function Home() {
                   href="/work"
                   className="inline-flex items-center text-sm text-cyan-400 hover:text-cyan-300 transition-colors"
                 >
-                  View all projects →
+                  View all work →
                 </Link>
               </div>
             </Container>
           </section>
           {/* Personal Projects Section */}
-          <section className="py-12">
+        
+                <ProjectSection/>
+          {/* <section className="py-12">
             <Container>
               <SectionHeading>My personal projects</SectionHeading>
               <div className="mt-8 grid gap-6 sm:grid-cols-2">
@@ -75,7 +78,9 @@ export default function Home() {
                 </Link>
               </div>
             </Container>
-          </section>
+          </section> */}
+          {/* Open Source Section */}
+          <OpenSource />
           {/* Testimonials Section
         <Testimonials /> */}
           {/* Latest Blog Posts

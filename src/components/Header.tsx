@@ -27,6 +27,7 @@ const links = [
     description: "Let’s collaborate—get in touch with me easily.",
   },
 ];
+ 
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -45,6 +46,12 @@ export default function Header() {
       setMenuOpen(false);
     }
   };
+  const onDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/doc/Om_Jamnekar_Resume.soft.pdf'; 
+    link.download = 'Om_Jamnekar_Resume.pdf';
+    link.click();
+  };
 
   return (
     <header className="bg-black">
@@ -56,27 +63,32 @@ export default function Header() {
           </Link>
 
           {/* Desktop links */}
-          <ul className="hidden min-[651px]:flex gap-8 text-sm">
-            {links.map((l) => (
-              <li key={l.href} className="relative group">
-                <Link
-                  href={l.href}
-                  onClick={(e) => handleScrollToSection(e, l.href)}
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  {l.label}
-                </Link>
+          <div className="flex flex-row items-center">
+              <ul className="hidden min-[651px]:flex gap-8 text-sm">
+                {links.map((l) => (
+                  <li key={l.href} className="relative group">
+                    <Link
+                      href={l.href}
+                      onClick={(e) => handleScrollToSection(e, l.href)}
+                      className="text-gray-400 hover:text-white transition-colors"
+                    >
+                      {l.label}
+                    </Link>
 
-                {/* Tooltip */}
-                <div className="absolute left-1/2 -translate-x-1/2 top-full mt-3 w-56 bg-black-900 border border-gray-700 text-white rounded-xl shadow-lg p-3 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out pointer-events-none">
-                  <h4 className="font-semibold text-sm mb-1">{l.label}</h4>
-                  <p className="text-xs text-gray-400 leading-snug">
-                    {l.description}
-                  </p>
-                </div>
-              </li>
-            ))}
-          </ul>
+                    {/* Tooltip */}
+                    <div className="absolute left-1/2 -translate-x-1/2 top-full mt-3 w-56 bg-black-900 border border-gray-700 text-white rounded-xl shadow-lg p-3 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out pointer-events-none">
+                      <h4 className="font-semibold text-sm mb-1">{l.label}</h4>
+                      <p className="text-xs text-gray-400 leading-snug">
+                        {l.description}
+                      </p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+              <button onClick={onDownload} className="hidden min-[651px]:block ml-4 px-2 py-0.5 bg-black text-cyan text-[14px] rounded border-cyan-600 border-2 hover:bg-gray-700 transition-colors">
+                Resume
+              </button>
+          </div>
 
           {/* Mobile dropdown */}
           <div className="min-[651px]:hidden relative">
@@ -97,7 +109,8 @@ export default function Header() {
               </svg>
             </button>
             {menuOpen && (
-              <ul className="absolute right-0 mt-2 w-64 bg-gray-900 border border-gray-700 rounded-lg shadow-lg z-50">
+           
+           <ul className="absolute right-0 mt-2 w-64 bg-gray-900 border border-gray-700 rounded-lg shadow-lg z-50">
                 {links.map((l) => (
                   <li key={l.href}>
                     <Link
@@ -113,8 +126,22 @@ export default function Header() {
                     </Link>
                   </li>
                 ))}
-              </ul>
+                {/* Resume button in mobile menu */}
+                <li>
+                  <button
+                    onClick={() => {
+                      onDownload();
+                      setMenuOpen(false);
+                    }}
+                    className="w-full text-left px-4 py-3 hover:bg-gray-800 transition-colors"
+                  >
+                    <h4 className="text-white font-semibold">Resume</h4>
+                    <p className="text-xs text-gray-400">Download my resume</p>
+                  </button>
+                </li>
+            </ul>
             )}
+           
           </div>
         </nav>
       </Container>

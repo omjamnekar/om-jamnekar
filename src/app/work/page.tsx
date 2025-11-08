@@ -3,6 +3,7 @@ import Container from "@/components/Container";
 import SectionHeading from "@/components/SectionHeading";
 import Link from "next/link";
 import PageTransition from "@/core/animation/PageTransition";
+import { workProject, WorkProject } from "@/data/workproject";
 
 export const metadata: Metadata = {
   title: "Work",
@@ -13,153 +14,9 @@ export const metadata: Metadata = {
   },
 };
 
-type WorkItem = {
-  title: string;
-  type: "app" | "website" | "tool" | "system";
-  description: string;
-  role: string;
-  company: string;
-  startDate: string;
-  endDate: string;
-  technologies: string[];
-  responsibilities: string[];
-  features: string[];
-  challenges: string[];
-  solutions: string[];
-  impact: {
-    metrics: string;
-    businessValue: string;
-  };
-  links: {
-    liveDemo?: string;
-    githubRepo?: string;
-    appStore?: string;
-    playStore?: string;
-    caseStudy?: string;
-  };
-  screenshots: { url: string; caption: string }[];
-};
 
-// Industry work (dummy data based on your backend schema)
-const industryItems: WorkItem[] = [
-  {
-    title: "FleetOps Dispatch",
-    type: "system",
-    description:
-      "A real-time dispatch and tracking platform for logistics operations with role-based access, live maps, and analytics dashboards.",
-    role: "Full Stack Engineer",
-    company: "LogiTech",
-    startDate: "Jan 2023",
-    endDate: "Dec 2023",
-    technologies: [
-      "Next.js",
-      "TypeScript",
-      "PostgreSQL",
-      "Prisma",
-      "Tailwind CSS",
-      "WebSockets",
-    ],
-    responsibilities: [
-      "Led development of core dispatch workflows",
-      "Implemented real-time communications",
-      "Designed and tuned database schema",
-    ],
-    features: [
-      "Live vehicle tracking",
-      "Route planning",
-      "Role-based permissions",
-    ],
-    challenges: [
-      "Consistency across concurrent updates",
-      "Balancing real-time UX and performance",
-    ],
-    solutions: [
-      "Optimistic updates with conflict resolution",
-      "Pub/Sub updates with granular subscriptions",
-    ],
-    impact: {
-      metrics: "~28% faster dispatch, ~35% fewer failed assignments",
-      businessValue: "Improved operational visibility, reduced delays",
-    },
-    links: {
-      liveDemo: "#",
-      githubRepo: "#",
-      caseStudy: "#",
-    },
-    screenshots: [],
-  },
-  {
-    title: "ShopWave",
-    type: "app",
-    description:
-      "A commerce companion app that streamlines catalog browsing, cart building, and order tracking across devices.",
-    role: "Frontend Engineer",
-    company: "RetailWorks",
-    startDate: "May 2022",
-    endDate: "Mar 2023",
-    technologies: [
-      "Next.js",
-      "React Query",
-      "TypeScript",
-      "Tailwind CSS",
-      "Stripe",
-    ],
-    responsibilities: [
-      "Built responsive UI and design primitives",
-      "Integrated checkout and subscriptions",
-      "Added analytics for funnel tracking",
-    ],
-    features: ["Universal search", "Saved carts", "Order history"],
-    challenges: ["Reducing bundle size for mobile", "Minimizing CLS"],
-    solutions: [
-      "Code-splitting, prefetching",
-      "Skeletons + image ratio handling",
-    ],
-    impact: {
-      metrics: "~22% conversion lift, ~18% faster TTI on mobile",
-      businessValue: "Higher sales conversion and UX",
-    },
-    links: {
-      liveDemo: "#",
-      githubRepo: "#",
-      playStore: "#",
-    },
-    screenshots: [],
-  },
-  {
-    title: "InsightForge",
-    type: "tool",
-    description:
-      "Internal developer tooling that generates service templates, CI configs, and dashboards to standardize delivery.",
-    role: "Platform Engineer",
-    company: "Acme Corp",
-    startDate: "Jan 2022",
-    endDate: "Aug 2022",
-    technologies: ["Next.js", "Node.js", "GraphQL", "TypeScript"],
-    responsibilities: [
-      "Authored generators and service blueprints",
-      "Built web UI for templates and metrics",
-      "Documented workflows and onboarded teams",
-    ],
-    features: ["Template library", "CI scaffolding", "Metrics widgets"],
-    challenges: ["Aligning templates across teams"],
-    solutions: ["Composable templates + guardrails"],
-    impact: {
-      metrics: "~40% faster project bootstrap",
-      businessValue: "Consistency and reduced maintenance",
-    },
-    links: {
-      githubRepo: "#",
-      caseStudy: "#",
-    },
-    screenshots: [],
-  },
-];
-
-
-
-function TypeBadge({ type }: { type: WorkItem["type"] }) {
-  const labelMap: Record<WorkItem["type"], string> = {
+function TypeBadge({ type }: { type: WorkProject["type"] }) {
+  const labelMap: Record<WorkProject["type"], string> = {
     app: "App",
     website: "Website",
     tool: "Tool",
@@ -172,7 +29,7 @@ function TypeBadge({ type }: { type: WorkItem["type"] }) {
   );
 }
 
-function WorkCard({ item }: { item: WorkItem }) {
+function WorkCard({ item }: { item: WorkProject }) {
   return (
     <PageTransition>
       <article className="bg-gray-950 border border-gray-800 rounded-xl p-6 hover:border-cyan-500/50 transition-colors">
@@ -190,7 +47,7 @@ function WorkCard({ item }: { item: WorkItem }) {
         </header>
 
         <p className="text-gray-300 text-sm leading-relaxed mb-4">
-          {item.description}
+          {item.summary}
         </p>
 
         <div className="flex flex-wrap gap-2 mb-5">
@@ -322,7 +179,7 @@ export default function WorkPage() {
           <Container>
             <SectionHeading>Industry Work</SectionHeading>
             <div className="grid md:grid-cols-2 gap-6 mt-8">
-              {industryItems.map((item) => (
+              {workProject.map((item) => (
                 <WorkCard key={item.title} item={item} />
               ))}
             </div>

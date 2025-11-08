@@ -102,7 +102,7 @@ export default function FreelanceClientForm() {
       <button
         type="submit"
         disabled={loading}
-        className="px-4 py-2 rounded-md bg-white text-black text-sm w-fit disabled:opacity-60 hover:bg-blue-700 transition"
+        className="px-4 py-2 rounded-md bg-white text-black text-sm  disabled:opacity-60 w-full hover:bg-blue-700 transition"
       >
         {loading ? "Sending..." : "Send"}
       </button>

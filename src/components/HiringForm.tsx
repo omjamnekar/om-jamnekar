@@ -101,7 +101,7 @@ export default function HiringForm() {
       {/* Submit Button (color unchanged) */}
       <button
         disabled={loading}
-        className="px-4 py-2 rounded-md bg-foreground text-background text-sm w-fit disabled:opacity-60"
+        className="px-4 py-2 rounded-md bg-foreground text-background text-sm w-full disabled:opacity-60"
       >
         {loading ? "Sending..." : "Send"}
       </button>
