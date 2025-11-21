@@ -62,8 +62,7 @@
 }
 
 .timeline-content h3 a:hover {
-  text-decoration: underline;
-  text-underline-offset: 4px;
+  text-decoration: none; /* Removed underline on hover */
 }
 
 .timeline-content h4 {
