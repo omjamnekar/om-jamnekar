@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { projects } from "@/data/personal_projects";
 
 export function generateStaticParams() {
@@ -178,12 +179,14 @@ export default async function ProjectPage({
                   <h2 className="text-2xl font-bold text-white">Gallery</h2>
                   <div className="grid grid-cols-2 gap-4">
                     {project.gallery.map((image, index) => (
-                      <img
-                        key={index}
-                        src={image}
-                        alt={`Gallery image ${index + 1}`}
-                        className="rounded-lg border border-gray-800"
-                      />
+                      <div key={index} className="relative w-full h-48">
+                        <Image
+                          src={image}
+                          alt={`Gallery image ${index + 1}`}
+                          fill
+                          className="rounded-lg border border-gray-800 object-cover"
+                        />
+                      </div>
                     ))}
                   </div>
                 </div>
@@ -196,11 +199,14 @@ export default async function ProjectPage({
               project.architectureImage && (
                 <div className="mt-6 space-y-4">
                   <h2 className="text-2xl font-bold text-white">Architecture</h2>
-                  <img
-                    src={project.architectureImage}
-                    alt="Project Architecture"
-                    className="rounded-lg border border-gray-800"
-                  />
+                  <div className="relative w-full h-64">
+                    <Image
+                      src={project.architectureImage}
+                      alt="Project Architecture"
+                      fill
+                      className="rounded-lg border border-gray-800 object-cover"
+                    />
+                  </div>
                 </div>
               )
           }
@@ -234,7 +240,7 @@ export default async function ProjectPage({
                         key={index}
                         className="border-l-4 border-cyan-400 pl-4 text-gray-300"
                       >
-                        <p>"{testimonial.quote}"</p>
+                        <p>&ldquo;{testimonial.quote}&rdquo;</p>
                         {testimonial.name && (
                           <footer className="mt-2 text-sm text-gray-400">
                             — {testimonial.name}
