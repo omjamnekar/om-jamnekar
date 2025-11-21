@@ -1,4 +1,3 @@
-
 import Container from "@/components/Container";
 import PageTransition from "@/core/animation/PageTransition";
 import { Metadata } from "next";
@@ -79,13 +78,18 @@ export default function OpenSourcePage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group block relative no-underline hover:no-underline"
+                    style={{ textDecoration: "none" }}
                   >
                     {/* Animated line */}
-                    <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-cyan-400/20 via-cyan-400/50 to-cyan-400/20 
+                    <div
+                    className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-cyan-400/20 via-cyan-400/50 to-cyan-400/20 
                                   group-hover:w-2 transition-all duration-500 ease-out rounded-full" />
                     
                     {/* Content */}
-                    <div className="pl-8 group-hover:pl-10 transition-all duration-500">
+                    <div className="pl-8 pb-1 group-hover:pl-10 transition-all duration-500"
+                    
+ 
+                    >
                       {/* Header Row */}
                       <div className="flex items-start justify-between mb-4 gap-4">
                         <div className="flex-1">
@@ -186,7 +190,7 @@ export default function OpenSourcePage() {
                         </svg>
                       </div>
                     </div>
-
+                      
                     {/* Bottom fade line */}
                     <div className="absolute bottom-0 left-8 right-0 h-px bg-gradient-to-r from-gray-800 via-gray-700 to-transparent 
                                   opacity-50 group-hover:opacity-100 transition-opacity duration-500" />

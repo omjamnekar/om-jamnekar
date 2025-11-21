@@ -17,6 +17,7 @@ function ProjectCard({ project }: { project: OpenSourceProject }) {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       className="group relative block no-underline hover:no-underline"
+      style={{ textDecoration: "none" }}
     >
       <div
         className={`

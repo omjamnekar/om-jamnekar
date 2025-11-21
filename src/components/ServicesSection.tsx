@@ -147,7 +147,8 @@ export default function ServicesSection() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {process.map((item, index) => (
               <div key={item.step} className="relative group">
-                <div className="bg-gray-950 border border-gray-800 rounded-xl p-6 text-center hover:border-cyan-500/50 transition-all duration-300">
+              <div className="bg-gray-950 border h-full border-gray-800 rounded-xl p-6 text-center hover:border-cyan-500/50 transition-all duration-300">
+
                   {/* <div className="inline-flex w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     <item.icon className="w-8 h-8 text-white" />
                   </div> */}
